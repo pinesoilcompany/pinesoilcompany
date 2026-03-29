@@ -3,414 +3,226 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Pines Oil Company — Sustainable used oil collection, biodiesel production, and recycling solutions." />
+  <meta name="description" content="Pines Oil Company — Premium used oil collection, biodiesel production, and sustainable recycling services." />
   <title>Pines Oil Company</title>
-
-  <!-- Preconnect for font performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
-
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <!-- ============================================================
-       NAVBAR
-  ============================================================ -->
+  <!-- ===================== NAVBAR ===================== -->
   <header class="navbar" id="navbar">
-    <div class="nav-inner container">
-      <a href="#hero" class="nav-logo">
-        <span class="logo-mark">&#9670;</span>
-        Pines Oil Co.
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-pine">&#9698;</span> Pines Oil Co.
       </a>
-      <nav class="nav-links" id="navLinks">
-        <a href="#services">Services</a>
-        <a href="#how-it-works">Process</a>
-        <a href="#advantages">Why Us</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <a href="#contact" class="btn btn-nav">Get a Quote</a>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html" class="active">Home</a>
+        <a href="services.html">Services</a>
+        <a href="how-it-works.html">How It Works</a>
+        <a href="advantages.html">Advantages</a>
+        <a href="contact.html">Contact</a>
+        <a href="contact.html" class="btn btn-nav">Schedule Pickup</a>
+      </nav>
     </div>
   </header>
 
-  <main>
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" id="hero">
+    <div class="hero-grain"></div>
+    <div class="hero-content">
+      <span class="hero-eyebrow reveal">East Texas · Est. 2024</span>
+      <h1 class="hero-title reveal">
+        Oil Recycled.<br />
+        <em>Value Returned.</em>
+      </h1>
+      <p class="hero-sub reveal">
+        We collect used oil, convert it to biodiesel, and close the loop —<br class="br-desktop" />
+        so your waste becomes the world's resource.
+      </p>
+      <div class="hero-ctas reveal">
+        <a href="contact.html" class="btn btn-primary btn-glow">Schedule a Pickup</a>
+        <a href="how-it-works.html" class="btn btn-ghost">See How It Works</a>
+      </div>
+    </div>
+    <div class="hero-badge reveal">
+      <div class="badge-ring">
+        <svg viewBox="0 0 120 120" class="badge-svg">
+          <path id="circle-text" d="M 60,60 m -45,0 a 45,45 0 1,1 90,0 a 45,45 0 1,1 -90,0" fill="none"/>
+          <text font-size="11" fill="var(--gold)" font-family="DM Sans, sans-serif" letter-spacing="3">
+            <textPath href="#circle-text">SUSTAINABLE · RELIABLE · LOCAL ·&nbsp;</textPath>
+          </text>
+        </svg>
+        <span class="badge-center">100%<br/><small>Recycled</small></span>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
 
-    <!-- ============================================================
-         HERO SECTION
-    ============================================================ -->
-    <section class="hero" id="hero">
-      <div class="hero-bg-texture"></div>
-      <div class="hero-grain"></div>
-      <div class="container hero-inner">
-        <div class="hero-eyebrow reveal">Sustainable. Responsible. Local.</div>
-        <h1 class="hero-headline reveal delay-1">
-          We Turn<br />
-          <em>Used Oil</em><br />
-          Into Opportunity
-        </h1>
-        <p class="hero-sub reveal delay-2">
-          Placeholder tagline — your short value proposition goes here. <br class="br-desktop" />
-          Trusted by restaurants, fleets, and facilities across the region.
+  <!-- ===================== TICKER / MARQUEE ===================== -->
+  <div class="ticker-wrap">
+    <div class="ticker-track">
+      <span>Used Oil Collection</span><span class="ticker-dot">◆</span>
+      <span>Biodiesel Production</span><span class="ticker-dot">◆</span>
+      <span>Sustainable Recycling</span><span class="ticker-dot">◆</span>
+      <span>East Texas &amp; Beyond</span><span class="ticker-dot">◆</span>
+      <span>Commercial &amp; Industrial</span><span class="ticker-dot">◆</span>
+      <span>Free Pickup Service</span><span class="ticker-dot">◆</span>
+      <!-- Duplicate for seamless loop -->
+      <span>Used Oil Collection</span><span class="ticker-dot">◆</span>
+      <span>Biodiesel Production</span><span class="ticker-dot">◆</span>
+      <span>Sustainable Recycling</span><span class="ticker-dot">◆</span>
+      <span>East Texas &amp; Beyond</span><span class="ticker-dot">◆</span>
+      <span>Commercial &amp; Industrial</span><span class="ticker-dot">◆</span>
+      <span>Free Pickup Service</span><span class="ticker-dot">◆</span>
+    </div>
+  </div>
+
+  <!-- ===================== INTRO SPLIT ===================== -->
+  <section class="intro-split section-pad">
+    <div class="container grid-2">
+      <div class="intro-text reveal">
+        <span class="label-tag">Who We Are</span>
+        <h2>A local solution<br/>to a global problem.</h2>
+        <p>
+          Pines Oil Company is a used oil collection and recycling company rooted in East Texas.
+          We partner with restaurants, auto shops, industrial facilities, and farms to divert
+          used oil from landfills and waterways — and transform it into clean-burning biodiesel.
         </p>
-        <div class="hero-cta reveal delay-3">
-          <a href="#contact" class="btn btn-primary hero-btn">
-            Schedule a Pickup
-            <span class="btn-arrow">&#8594;</span>
-          </a>
-          <a href="#services" class="btn btn-ghost">Our Services</a>
+        <a href="services.html" class="btn btn-outline">Explore Services →</a>
+      </div>
+      <div class="intro-stats reveal">
+        <div class="stat-card">
+          <span class="stat-number">0 gal</span>
+          <span class="stat-label">Oil Collected</span>
         </div>
-        <div class="hero-badges reveal delay-4">
-          <span class="badge">&#10003; Free Pickup</span>
-          <span class="badge">&#10003; No Contracts</span>
-          <span class="badge">&#10003; Eco-Certified</span>
+        <div class="stat-card">
+          <span class="stat-number">0+</span>
+          <span class="stat-label">Partners Served</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">0 lb</span>
+          <span class="stat-label">CO₂ Offset</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">100%</span>
+          <span class="stat-label">Locally Operated</span>
         </div>
       </div>
-      <div class="hero-scroll-hint">
-        <span>Scroll</span>
-        <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ===================== SERVICES PREVIEW ===================== -->
+  <section class="services-preview section-pad bg-dark">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="label-tag label-light">What We Do</span>
+        <h2 class="text-light">Three pillars.<br/>One purpose.</h2>
       </div>
-    </section>
-
-    <!-- ============================================================
-         SERVICES SECTION
-    ============================================================ -->
-    <section class="services section" id="services">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="section-label">What We Do</span>
-          <h2>End-to-End Oil <em>Solutions</em></h2>
-          <p class="section-sub">Placeholder — brief description of your service offering goes here.</p>
+      <div class="cards-row">
+        <div class="service-card reveal" data-delay="0">
+          <div class="card-icon">⛽</div>
+          <h3>Oil Pickup</h3>
+          <p>We schedule regular or on-demand pickups of your used cooking or industrial oil — at no cost to you.</p>
+          <a href="services.html#pickup" class="card-link">Learn more →</a>
         </div>
-
-        <div class="services-grid">
-
-          <!-- Card 1 -->
-          <article class="service-card reveal" data-delay="0">
-            <div class="card-icon-wrap">
-              <div class="card-icon">
-                <!-- Truck / Pickup icon -->
-                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect x="4" y="14" width="26" height="18" rx="2" stroke="currentColor" stroke-width="2.5"/>
-                  <path d="M30 20h8l6 6v6H30V20z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
-                  <circle cx="12" cy="34" r="4" stroke="currentColor" stroke-width="2.5"/>
-                  <circle cx="38" cy="34" r="4" stroke="currentColor" stroke-width="2.5"/>
-                </svg>
-              </div>
-            </div>
-            <div class="card-body">
-              <h3>Oil Pickup</h3>
-              <p>We collect used cooking oil, industrial oil, and grease from your location—on your schedule, at no cost to you.</p>
-              <a href="#contact" class="card-link">Schedule Now &#8594;</a>
-            </div>
-            <div class="card-number">01</div>
-          </article>
-
-          <!-- Card 2 -->
-          <article class="service-card reveal" data-delay="100">
-            <div class="card-icon-wrap">
-              <div class="card-icon">
-                <!-- Biodiesel / Leaf icon -->
-                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M24 44C24 44 8 34 8 20C8 12 15 6 24 6C33 6 40 12 40 20C40 34 24 44 24 44Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
-                  <path d="M24 44V20" stroke="currentColor" stroke-width="2.5"/>
-                  <path d="M24 20L16 12" stroke="currentColor" stroke-width="2.5"/>
-                  <path d="M24 28L32 20" stroke="currentColor" stroke-width="2.5"/>
-                </svg>
-              </div>
-            </div>
-            <div class="card-body">
-              <h3>Biodiesel Production</h3>
-              <p>Collected oil is refined into clean-burning biodiesel—reducing emissions and creating a local renewable fuel supply.</p>
-              <a href="#contact" class="card-link">Learn More &#8594;</a>
-            </div>
-            <div class="card-number">02</div>
-          </article>
-
-          <!-- Card 3 -->
-          <article class="service-card reveal" data-delay="200">
-            <div class="card-icon-wrap">
-              <div class="card-icon">
-                <!-- Recycle icon -->
-                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M24 8L30 18H18L24 8Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
-                  <path d="M18 18L8 36H20" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
-                  <path d="M28 36H40L34 26" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
-                  <path d="M20 36H28" stroke="currentColor" stroke-width="2.5"/>
-                  <path d="M30 18L34 26" stroke="currentColor" stroke-width="2.5"/>
-                </svg>
-              </div>
-            </div>
-            <div class="card-body">
-              <h3>Oil Recycling</h3>
-              <p>Responsible recycling solutions for grease traps, spent motor oil, and industrial lubricants. Compliant. Documented. Hassle-free.</p>
-              <a href="#contact" class="card-link">Get Details &#8594;</a>
-            </div>
-            <div class="card-number">03</div>
-          </article>
-
+        <div class="service-card reveal" data-delay="150">
+          <div class="card-icon">🌿</div>
+          <h3>Biodiesel Production</h3>
+          <p>Collected oil is refined into high-grade biodiesel, reducing emissions and replacing fossil fuels.</p>
+          <a href="services.html#biodiesel" class="card-link">Learn more →</a>
+        </div>
+        <div class="service-card reveal" data-delay="300">
+          <div class="card-icon">♻️</div>
+          <h3>Recycling Programs</h3>
+          <p>Custom recycling solutions for restaurants, fleets, and industrial clients with full compliance support.</p>
+          <a href="services.html#recycling" class="card-link">Learn more →</a>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- ============================================================
-         HOW IT WORKS
-    ============================================================ -->
-    <section class="how-it-works section" id="how-it-works">
-      <div class="hiw-bg"></div>
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="section-label">Simple Process</span>
-          <h2>How It <em>Works</em></h2>
-          <p class="section-sub">Four easy steps from first call to completed service.</p>
+  <!-- ===================== PROCESS TEASER ===================== -->
+  <section class="process-teaser section-pad">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="label-tag">Simple Process</span>
+        <h2>From your tank<br/>to the road.</h2>
+      </div>
+      <div class="steps-row">
+        <div class="step reveal" data-delay="0">
+          <span class="step-num">01</span>
+          <h4>Schedule</h4>
+          <p>Book a pickup online or by phone. We work around your schedule.</p>
         </div>
-
-        <div class="steps-row">
-
-          <div class="step reveal" data-delay="0">
-            <div class="step-num">01</div>
-            <div class="step-icon">
-              <!-- Phone icon -->
-              <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M10 6h6l3 7-3.5 2.5A18 18 0 0 0 22 24l2.5-3.5L32 24v6a2 2 0 0 1-2 2C12 32 4 20 4 8a2 2 0 0 1 2-2h4z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-              </svg>
-            </div>
-            <h4>Contact Us</h4>
-            <p>Call, email, or fill out the form. We'll respond within one business day.</p>
-          </div>
-
-          <div class="step-connector reveal" data-delay="50">&#8594;</div>
-
-          <div class="step reveal" data-delay="100">
-            <div class="step-num">02</div>
-            <div class="step-icon">
-              <!-- Calendar icon -->
-              <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="4" y="8" width="28" height="24" rx="2" stroke="currentColor" stroke-width="2"/>
-                <path d="M4 14h28" stroke="currentColor" stroke-width="2"/>
-                <path d="M12 4v4M24 4v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                <rect x="10" y="20" width="4" height="4" rx="1" fill="currentColor"/>
-                <rect x="22" y="20" width="4" height="4" rx="1" fill="currentColor"/>
-              </svg>
-            </div>
-            <h4>Schedule Pickup</h4>
-            <p>We coordinate a date and time that works around your operations.</p>
-          </div>
-
-          <div class="step-connector reveal" data-delay="150">&#8594;</div>
-
-          <div class="step reveal" data-delay="200">
-            <div class="step-num">03</div>
-            <div class="step-icon">
-              <!-- Container icon -->
-              <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6 12h24v18a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V12z" stroke="currentColor" stroke-width="2"/>
-                <path d="M4 8h28a1 1 0 0 1 1 1v3H3V9a1 1 0 0 1 1-1z" stroke="currentColor" stroke-width="2"/>
-                <path d="M14 18h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <h4>We Collect</h4>
-            <p>Our team arrives, safely removes and hauls your used oil—containers cleaned and replaced.</p>
-          </div>
-
-          <div class="step-connector reveal" data-delay="250">&#8594;</div>
-
-          <div class="step reveal" data-delay="300">
-            <div class="step-num">04</div>
-            <div class="step-icon">
-              <!-- Checkmark icon -->
-              <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="18" cy="18" r="14" stroke="currentColor" stroke-width="2"/>
-                <path d="M11 18l5 5 9-10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </div>
-            <h4>Done &amp; Documented</h4>
-            <p>You receive a certificate of recycling. We handle the rest—refining, disposing, or converting responsibly.</p>
-          </div>
-
+        <div class="step-arrow reveal">→</div>
+        <div class="step reveal" data-delay="100">
+          <span class="step-num">02</span>
+          <h4>Collect</h4>
+          <p>Our team arrives and safely removes your used oil — no mess, no hassle.</p>
+        </div>
+        <div class="step-arrow reveal">→</div>
+        <div class="step reveal" data-delay="200">
+          <span class="step-num">03</span>
+          <h4>Refine</h4>
+          <p>Oil is processed and converted into clean biodiesel at our local facility.</p>
+        </div>
+        <div class="step-arrow reveal">→</div>
+        <div class="step reveal" data-delay="300">
+          <span class="step-num">04</span>
+          <h4>Renew</h4>
+          <p>Biodiesel powers vehicles, reducing CO₂ and completing the cycle.</p>
         </div>
       </div>
-    </section>
-
-    <!-- ============================================================
-         ADVANTAGES SECTION
-    ============================================================ -->
-    <section class="advantages section" id="advantages">
-      <div class="container advantages-inner">
-
-        <div class="advantages-left reveal">
-          <span class="section-label">Why Choose Us</span>
-          <h2>Built Different.<br /><em>Built for You.</em></h2>
-          <p class="section-sub">Placeholder — describe what sets your company apart from competitors in this region.</p>
-          <a href="#contact" class="btn btn-primary">Start Today &#8594;</a>
-        </div>
-
-        <div class="advantages-right">
-          <ul class="adv-list">
-            <li class="adv-item reveal" data-delay="0">
-              <span class="adv-icon">&#10022;</span>
-              <div>
-                <strong>No Hidden Fees</strong>
-                <p>Transparent pricing. Free pickup with no contracts or surprise charges.</p>
-              </div>
-            </li>
-            <li class="adv-item reveal" data-delay="80">
-              <span class="adv-icon">&#10022;</span>
-              <div>
-                <strong>Fully Compliant</strong>
-                <p>Licensed, insured, and operating within all local environmental regulations.</p>
-              </div>
-            </li>
-            <li class="adv-item reveal" data-delay="160">
-              <span class="adv-icon">&#10022;</span>
-              <div>
-                <strong>Fast &amp; Reliable</strong>
-                <p>Dependable scheduling with same-week availability in most service areas.</p>
-              </div>
-            </li>
-            <li class="adv-item reveal" data-delay="240">
-              <span class="adv-icon">&#10022;</span>
-              <div>
-                <strong>Eco-First Mission</strong>
-                <p>Every gallon we collect is either recycled or converted into renewable biodiesel.</p>
-              </div>
-            </li>
-            <li class="adv-item reveal" data-delay="320">
-              <span class="adv-icon">&#10022;</span>
-              <div>
-                <strong>Local &amp; Community-Rooted</strong>
-                <p>We're a regional business — not a national franchise. You deal with real people, every time.</p>
-              </div>
-            </li>
-          </ul>
-        </div>
-
+      <div class="center-cta reveal">
+        <a href="how-it-works.html" class="btn btn-primary">See Full Process</a>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- ============================================================
-         STATS BAND
-    ============================================================ -->
-    <section class="stats-band">
-      <div class="container stats-row">
-        <div class="stat reveal" data-delay="0">
-          <span class="stat-num" data-target="500">0</span><span class="stat-suffix">+</span>
-          <span class="stat-label">Clients Served</span>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat reveal" data-delay="100">
-          <span class="stat-num" data-target="2">0</span><span class="stat-suffix">M+</span>
-          <span class="stat-label">Gallons Recycled</span>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat reveal" data-delay="200">
-          <span class="stat-num" data-target="100">0</span><span class="stat-suffix">%</span>
-          <span class="stat-label">Compliance Rate</span>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat reveal" data-delay="300">
-          <span class="stat-num" data-target="7">0</span><span class="stat-suffix">+</span>
-          <span class="stat-label">Years in Business</span>
-        </div>
+  <!-- ===================== CTA BAND ===================== -->
+  <section class="cta-band">
+    <div class="container">
+      <div class="cta-band-inner reveal">
+        <h2>Ready to turn waste<br/>into something better?</h2>
+        <a href="contact.html" class="btn btn-gold btn-glow">Get Started Today</a>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- ============================================================
-         CONTACT / CTA SECTION
-    ============================================================ -->
-    <section class="contact section" id="contact">
-      <div class="container contact-inner">
-
-        <div class="contact-left reveal">
-          <span class="section-label">Get In Touch</span>
-          <h2>Ready to Get<br /><em>Started?</em></h2>
-          <p>Fill out the form and we'll get back to you within one business day to discuss pickup, services, or pricing.</p>
-
-          <div class="contact-details">
-            <div class="contact-detail">
-              <span class="detail-icon">
-                <svg viewBox="0 0 24 24" fill="none"><path d="M6 5h3l1.5 4L8 11a12 12 0 0 0 5 5l2-2.5L19 15v3a1 1 0 0 1-1 1C9 19 5 12 5 6a1 1 0 0 1 1-1z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
-              </span>
-              <div>
-                <strong>Phone</strong>
-                <span>(555) 000-0000</span>
-              </div>
-            </div>
-            <div class="contact-detail">
-              <span class="detail-icon">
-                <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M3 8l9 6 9-6" stroke="currentColor" stroke-width="1.8"/></svg>
-              </span>
-              <div>
-                <strong>Email</strong>
-                <span>info@pinesoilco.com</span>
-              </div>
-            </div>
-            <div class="contact-detail">
-              <span class="detail-icon">
-                <svg viewBox="0 0 24 24" fill="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.8"/></svg>
-              </span>
-              <div>
-                <strong>Service Area</strong>
-                <span>Placeholder Region, TX</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="contact-right reveal delay-2">
-          <form class="contact-form" id="contactForm" novalidate>
-            <div class="form-group">
-              <label for="name">Full Name</label>
-              <input type="text" id="name" name="name" placeholder="John Smith" required />
-            </div>
-            <div class="form-group">
-              <label for="phone">Phone Number</label>
-              <input type="tel" id="phone" name="phone" placeholder="(555) 000-0000" required />
-            </div>
-            <div class="form-group">
-              <label for="business">Business / Company</label>
-              <input type="text" id="business" name="business" placeholder="Your restaurant or company" />
-            </div>
-            <div class="form-group">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" rows="4" placeholder="Tell us about your oil volume, location, or questions..."></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary btn-full">
-              Send Message
-              <span class="btn-arrow">&#8594;</span>
-            </button>
-            <p class="form-note">We respond within 1 business day. No spam, ever.</p>
-          </form>
-        </div>
-
-      </div>
-    </section>
-
-  </main>
-
-  <!-- ============================================================
-       FOOTER
-  ============================================================ -->
+  <!-- ===================== FOOTER ===================== -->
   <footer class="footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <span class="logo-mark">&#9670;</span>
-        Pines Oil Company
-        <p>Turning used oil into sustainable opportunity.</p>
+        <span class="nav-logo"><span class="logo-pine">&#9698;</span> Pines Oil Co.</span>
+        <p>Sustainable. Local. Reliable.</p>
       </div>
       <nav class="footer-nav">
-        <a href="#services">Services</a>
-        <a href="#how-it-works">Process</a>
-        <a href="#advantages">Why Us</a>
-        <a href="#contact">Contact</a>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="how-it-works.html">How It Works</a>
+        <a href="advantages.html">Advantages</a>
+        <a href="contact.html">Contact</a>
       </nav>
-      <p class="footer-copy">&copy; 2025 Pines Oil Company. All rights reserved.</p>
+      <div class="footer-contact">
+        <p>📍 Athens, Texas</p>
+        <p>📞 <a href="tel:+19727407232">(900) 000-0000</a></p>
+        <p>✉️ <a href="mailto:hello@pinesoilcompany.com">hello@pinesoilcompany.com</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Pines Oil Company. All rights reserved.</p>
     </div>
   </footer>
 
-  <script src="script.js" defer></script>
+  <script src="script.js"></script>
 </body>
 </html>

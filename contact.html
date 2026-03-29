@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact Pines Oil Company — schedule a pickup, request a quote, or ask a question." />
+  <title>Contact — Pines Oil Company</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-pine">&#9698;</span> Pines Oil Co.
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="how-it-works.html">How It Works</a>
+        <a href="advantages.html">Advantages</a>
+        <a href="contact.html" class="active">Contact</a>
+        <a href="contact.html" class="btn btn-nav">Schedule Pickup</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero bg-dark">
+    <div class="container">
+      <span class="label-tag label-light reveal">Get In Touch</span>
+      <h1 class="text-light reveal">Let's Talk Oil.</h1>
+      <p class="page-hero-sub text-muted reveal">
+        Schedule a pickup, request a quote, or just ask a question.
+      </p>
+    </div>
+    <div class="page-hero-divider"></div>
+  </section>
+
+  <!-- CONTACT LAYOUT -->
+  <section class="contact-section section-pad">
+    <div class="container grid-2 contact-grid">
+
+      <!-- LEFT: FORM -->
+      <div class="contact-form-wrap reveal">
+        <h2>Send Us a Message</h2>
+        <p class="form-intro">Fill out the form below and we'll get back to you within one business day.</p>
+
+        <form class="contact-form" id="contactForm" novalidate>
+
+          <!-- Name -->
+          <div class="form-group">
+            <label for="name">Full Name *</label>
+            <input type="text" id="name" name="name" placeholder="Jane Smith" required autocomplete="name" />
+            <span class="form-error" id="nameError">Please enter your name.</span>
+          </div>
+
+          <!-- Business -->
+          <div class="form-group">
+            <label for="business">Business Name</label>
+            <input type="text" id="business" name="business" placeholder="Smith's Auto Repair" autocomplete="organization" />
+          </div>
+
+          <!-- Phone -->
+          <div class="form-group">
+            <label for="phone">Phone Number *</label>
+            <input type="tel" id="phone" name="phone" placeholder="(903) 000-0000" required autocomplete="tel" />
+            <span class="form-error" id="phoneError">Please enter a valid phone number.</span>
+          </div>
+
+          <!-- Email -->
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="jane@example.com" autocomplete="email" />
+          </div>
+
+          <!-- Service type -->
+          <div class="form-group">
+            <label for="service">What are you interested in?</label>
+            <select id="service" name="service">
+              <option value="" disabled selected>Select a service</option>
+              <option value="pickup">Used Oil Pickup</option>
+              <option value="biodiesel">Biodiesel Purchase</option>
+              <option value="program">Recycling Program</option>
+              <option value="other">General Question</option>
+            </select>
+          </div>
+
+          <!-- Volume -->
+          <div class="form-group">
+            <label for="volume">Approximate Volume</label>
+            <select id="volume" name="volume">
+              <option value="" disabled selected>Select volume range</option>
+              <option value="small">Under 55 gallons</option>
+              <option value="medium">55–275 gallons</option>
+              <option value="large">275–1,000 gallons</option>
+              <option value="bulk">1,000+ gallons</option>
+            </select>
+          </div>
+
+          <!-- Message -->
+          <div class="form-group full-width">
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell us about your oil type, location, frequency, or any questions..." required></textarea>
+            <span class="form-error" id="messageError">Please enter a message.</span>
+          </div>
+
+          <!-- Submit -->
+          <div class="form-group full-width">
+            <button type="submit" class="btn btn-primary btn-glow btn-full" id="submitBtn">
+              Send Message
+            </button>
+          </div>
+
+          <!-- Success message (hidden by default) -->
+          <div class="form-success" id="formSuccess" hidden>
+            <span>✅</span>
+            <div>
+              <strong>Message received!</strong>
+              <p>We'll be in touch within one business day.</p>
+            </div>
+          </div>
+
+        </form>
+      </div>
+
+      <!-- RIGHT: CONTACT INFO -->
+      <div class="contact-info-wrap reveal">
+        <h2>Direct Contact</h2>
+        <p>Prefer to reach us directly? We're available Monday–Saturday, 7am–6pm.</p>
+
+        <div class="contact-card-list">
+          <div class="contact-info-card">
+            <div class="contact-info-icon">📞</div>
+            <div>
+              <strong>Phone</strong>
+              <a href="tel:+19000000000">(900) 000-0000</a>
+            </div>
+          </div>
+          <div class="contact-info-card">
+            <div class="contact-info-icon">✉️</div>
+            <div>
+              <strong>Email</strong>
+              <a href="mailto:hello@pinesoilco.com">hello@pinesoilco.com</a>
+            </div>
+          </div>
+          <div class="contact-info-card">
+            <div class="contact-info-icon">📍</div>
+            <div>
+              <strong>Service Area</strong>
+              <span>East Texas &amp; surrounding counties</span>
+            </div>
+          </div>
+          <div class="contact-info-card">
+            <div class="contact-info-icon">🕐</div>
+            <div>
+              <strong>Hours</strong>
+              <span>Mon–Sat: 7:00am – 6:00pm</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick facts -->
+        <div class="contact-quick">
+          <h3>Before You Call</h3>
+          <ul class="checklist">
+            <li>Know your approximate oil volume</li>
+            <li>Have your address ready</li>
+            <li>Note any accessibility concerns</li>
+            <li>Identify the type of oil if possible</li>
+          </ul>
+        </div>
+
+        <!-- Response commitment -->
+        <div class="response-commit">
+          <div class="response-icon">⚡</div>
+          <div>
+            <strong>Fast Response Guarantee</strong>
+            <p>We respond to all inquiries within 1 business day — usually within hours.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE AREA MAP PLACEHOLDER -->
+  <section class="map-section bg-beige section-pad">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="label-tag">Coverage Area</span>
+        <h2>We come to you.</h2>
+      </div>
+      <div class="map-placeholder reveal">
+        <div class="map-placeholder-inner">
+          <span class="map-pin">📍</span>
+          <strong>East Texas Service Area</strong>
+          <p>Serving Wood, Smith, Upshur, Gregg, Rusk, and surrounding counties.<br />
+          Not sure if you're in our zone? Just ask — we're expanding.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="nav-logo"><span class="logo-pine">&#9698;</span> Pines Oil Co.</span>
+        <p>Sustainable. Local. Reliable.</p>
+      </div>
+      <nav class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="how-it-works.html">How It Works</a>
+        <a href="advantages.html">Advantages</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="footer-contact">
+        <p>📍 East Texas, USA</p>
+        <p>📞 <a href="tel:+19727407232">(972) 740-7232</a></p>
+        <p>✉️ <a href="mailto:hello@pinesoilcompany.com">hello@pinesoilcompany.com</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Pines Oil Company. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

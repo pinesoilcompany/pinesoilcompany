@@ -1,195 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Pines Oil Company Services — Used oil pickup, biodiesel production, and recycling programs." />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Services — Pines Oil Company</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Pines Oil Company offers used oil collection, biodiesel production, and full recycling services for commercial and industrial clients.">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <header class="navbar" id="navbar">
-    <div class="nav-inner">
-      <a href="index.html" class="nav-logo">
-        <span class="logo-pine">&#9698;</span> Pines Oil Co.
-      </a>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
-      <nav class="nav-links" id="navLinks">
-        <a href="index.html">Home</a>
-        <a href="services.html" class="active">Services</a>
-        <a href="how-it-works.html">How It Works</a>
-        <a href="advantages.html">Advantages</a>
-        <a href="contact.html">Contact</a>
-        <a href="contact.html" class="btn btn-nav">Schedule Pickup</a>
-      </nav>
-    </div>
-  </header>
-
-  <!-- PAGE HERO -->
-  <section class="page-hero bg-dark">
+  <!-- ── Navigation ─────────────────────────────────────── -->
+  <nav class="nav">
     <div class="container">
-      <span class="label-tag label-light reveal">Our Services</span>
-      <h1 class="text-light reveal">What We Offer</h1>
-      <p class="page-hero-sub text-muted reveal">
-        Full-service oil recycling — from collection to conversion.
-      </p>
+      <div class="nav__inner">
+        <a href="index.html" class="nav__logo">
+          <span class="nav__logo-name">Pines Oil Company</span>
+          <span class="nav__logo-sub">Est. Since Day One</span>
+        </a>
+        <button class="nav__toggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav__links" role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="how-it-works.html">How It Works</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="page-hero-divider"></div>
+  </nav>
+
+  <!-- ── Page Hero ──────────────────────────────────────── -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="section-label">What We Offer</span>
+      <h1>Our Services</h1>
+      <p>Comprehensive used oil management from collection to recycling — handled professionally and in full regulatory compliance.</p>
+    </div>
   </section>
 
-  <!-- SERVICE 1: OIL PICKUP -->
-  <section class="service-detail section-pad" id="pickup">
-    <div class="container grid-2 grid-flip">
-      <div class="service-detail-text reveal">
-        <span class="label-tag">Service 01</span>
-        <h2>Used Oil Pickup</h2>
-        <p>
-          We make oil disposal simple. Whether you're a restaurant producing fryer oil,
-          an auto shop collecting motor oil, or an industrial facility with bulk waste —
-          we handle it all. No fees. No mess. No downtime.
-        </p>
-        <ul class="checklist">
-          <li>Scheduled or on-demand pickups</li>
-          <li>All container types accepted</li>
-          <li>Compliant documentation provided</li>
-          <li>Free service for qualifying volumes</li>
-          <li>Same-day availability in most areas</li>
-        </ul>
-        <a href="contact.html" class="btn btn-primary btn-glow">Book a Pickup</a>
-      </div>
-      <div class="service-detail-visual reveal">
-        <div class="visual-card visual-oil">
-          <div class="visual-icon">⛽</div>
-          <div class="visual-label">Oil Pickup</div>
-          <div class="visual-tag">Free Service</div>
+  <!-- ── Oil Collection ─────────────────────────────────── -->
+  <section class="section">
+    <div class="container">
+      <div class="intro-grid">
+        <div>
+          <span class="section-label">Service 01</span>
+          <h2 class="section-title">Used Oil Collection</h2>
+          <div class="divider"></div>
+          <p>
+            We provide scheduled and on-demand used oil pickup for automotive service centers,
+            fleet maintenance operations, industrial facilities, and other commercial oil generators.
+            Our team arrives with all necessary equipment, handles the transfer safely, and provides
+            proper documentation for your records.
+          </p>
+          <p>
+            Whether you generate a small volume weekly or large volumes on irregular schedules,
+            we build a collection plan around your operation — not the other way around.
+          </p>
+          <ul style="margin-top:8px; margin-left:0;">
+            <li style="display:flex; gap:12px; margin-bottom:10px; align-items:flex-start; color: var(--gray); font-family: var(--font-body);">
+              <span style="color:var(--accent); font-weight:700; flex-shrink:0;">—</span>
+              Scheduled recurring pickups available
+            </li>
+            <li style="display:flex; gap:12px; margin-bottom:10px; align-items:flex-start; color: var(--gray); font-family: var(--font-body);">
+              <span style="color:var(--accent); font-weight:700; flex-shrink:0;">—</span>
+              On-call collection for overflow situations
+            </li>
+            <li style="display:flex; gap:12px; margin-bottom:10px; align-items:flex-start; color: var(--gray); font-family: var(--font-body);">
+              <span style="color:var(--accent); font-weight:700; flex-shrink:0;">—</span>
+              Manifest and waste transfer documentation included
+            </li>
+            <li style="display:flex; gap:12px; align-items:flex-start; color: var(--gray); font-family: var(--font-body);">
+              <span style="color:var(--accent); font-weight:700; flex-shrink:0;">—</span>
+              Compliant with all state and federal regulations
+            </li>
+          </ul>
+        </div>
+        <div class="intro-visual" style="background: var(--green-mid);">
+          <div class="intro-visual__inner">
+            <div class="intro-visual__mark">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3" y="8" width="18" height="12" rx="2"/>
+                <path d="M7 8V6a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2"/>
+                <line x1="12" y1="12" x2="12" y2="16"/>
+                <line x1="10" y1="14" x2="14" y2="14"/>
+              </svg>
+            </div>
+            <div class="intro-visual__caption">Collection Service</div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <div class="section-divider"></div>
-
-  <!-- SERVICE 2: BIODIESEL -->
-  <section class="service-detail section-pad" id="biodiesel">
-    <div class="container grid-2">
-      <div class="service-detail-visual reveal">
-        <div class="visual-card visual-bio">
-          <div class="visual-icon">🌿</div>
-          <div class="visual-label">Biodiesel</div>
-          <div class="visual-tag">Clean Fuel</div>
+  <!-- ── Biodiesel ───────────────────────────────────────── -->
+  <section class="section section--alt">
+    <div class="container">
+      <div class="intro-grid">
+        <div class="intro-visual" style="order: -1;">
+          <div class="intro-visual__inner">
+            <div class="intro-visual__mark">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 2C8 7 4 10 4 14a8 8 0 0 0 16 0c0-4-4-7-8-12z"/>
+                <path d="M12 16a4 4 0 0 1-4-4"/>
+              </svg>
+            </div>
+            <div class="intro-visual__caption">Biodiesel Production</div>
+          </div>
         </div>
-      </div>
-      <div class="service-detail-text reveal">
-        <span class="label-tag">Service 02</span>
-        <h2>Biodiesel Production</h2>
-        <p>
-          Your used oil doesn't go to waste — it goes to work. Through transesterification,
-          we convert collected oil into B100 biodiesel, a clean-burning renewable fuel
-          that reduces particulate emissions and extends engine life.
-        </p>
-        <ul class="checklist">
-          <li>High-grade B100 &amp; blended biodiesel</li>
-          <li>ASTM D6751 compliant processing</li>
-          <li>Lower carbon footprint per gallon</li>
-          <li>Available for fleet purchase</li>
-          <li>Locally produced and distributed</li>
-        </ul>
-        <a href="contact.html" class="btn btn-primary btn-glow">Inquire About Fuel</a>
-      </div>
-    </div>
-  </section>
-
-  <div class="section-divider"></div>
-
-  <!-- SERVICE 3: RECYCLING -->
-  <section class="service-detail section-pad" id="recycling">
-    <div class="container grid-2 grid-flip">
-      <div class="service-detail-text reveal">
-        <span class="label-tag">Service 03</span>
-        <h2>Recycling Programs</h2>
-        <p>
-          Beyond pickup and production, we offer structured recycling programs for
-          businesses that want a full-circle partnership. We'll assess your waste streams,
-          set up regular collection schedules, and provide impact reporting.
-        </p>
-        <ul class="checklist">
-          <li>Custom program design per client</li>
-          <li>Monthly or quarterly impact reports</li>
-          <li>EPA compliance support</li>
-          <li>Multi-location service available</li>
-          <li>Certificates of recycling provided</li>
-        </ul>
-        <a href="contact.html" class="btn btn-primary btn-glow">Start a Program</a>
-      </div>
-      <div class="service-detail-visual reveal">
-        <div class="visual-card visual-recycle">
-          <div class="visual-icon">♻️</div>
-          <div class="visual-label">Recycling</div>
-          <div class="visual-tag">Custom Programs</div>
+        <div>
+          <span class="section-label">Service 02</span>
+          <h2 class="section-title">Biodiesel Production</h2>
+          <div class="divider"></div>
+          <p>
+            Used cooking oil and certain grades of waste petroleum oil can be converted
+            into biodiesel — a clean-burning, renewable fuel. Pines Oil Company processes
+            eligible feedstocks through transesterification to produce quality biodiesel
+            suitable for diesel engines and heating systems.
+          </p>
+          <p>
+            This process captures value from material that would otherwise require costly
+            disposal, while contributing to a cleaner fuel supply chain. It is one of the
+            most practical forms of industrial recycling available today.
+          </p>
+          <ul style="margin-top:8px; margin-left:0;">
+            <li style="display:flex; gap:12px; margin-bottom:10px; align-items:flex-start; color: var(--gray); font-family: var(--font-body);">
+              <span style="color:var(--accent); font-weight:700; flex-shrink:0;">—</span>
+              Feedstocks include used cooking oil and select petroleum oils
+            </li>
+            <li style="display:flex; gap:12px; margin-bottom:10px; align-items:flex-start; color: var(--gray); font-family: var(--font-body);">
+              <span style="color:var(--accent); font-weight:700; flex-shrink:0;">—</span>
+              Output used in diesel engines and industrial heating
+            </li>
+            <li style="display:flex; gap:12px; align-items:flex-start; color: var(--gray); font-family: var(--font-body);">
+              <span style="color:var(--accent); font-weight:700; flex-shrink:0;">—</span>
+              Reduces reliance on virgin petroleum inputs
+            </li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- WHO WE SERVE -->
-  <section class="who-serves section-pad bg-beige">
+  <!-- ── Recycling ───────────────────────────────────────── -->
+  <section class="section">
     <div class="container">
-      <div class="section-header reveal">
-        <span class="label-tag">Who We Serve</span>
-        <h2>Built for businesses<br/>of every size.</h2>
-      </div>
-      <div class="industry-grid">
-        <div class="industry-chip reveal" data-delay="0">🍳 Restaurants</div>
-        <div class="industry-chip reveal" data-delay="50">🚗 Auto Shops</div>
-        <div class="industry-chip reveal" data-delay="100">🏭 Industrial Facilities</div>
-        <div class="industry-chip reveal" data-delay="150">🚜 Farms &amp; Agriculture</div>
-        <div class="industry-chip reveal" data-delay="200">🚌 Fleet Operators</div>
-        <div class="industry-chip reveal" data-delay="250">🏗️ Construction</div>
-        <div class="industry-chip reveal" data-delay="300">⚓ Marine Operations</div>
-        <div class="industry-chip reveal" data-delay="350">🛢️ Storage Facilities</div>
+      <div class="intro-grid">
+        <div>
+          <span class="section-label">Service 03</span>
+          <h2 class="section-title">Recycling Services</h2>
+          <div class="divider"></div>
+          <p>
+            Not all collected oil becomes biodiesel. Some material is processed and
+            re-refined for industrial lubricant use, used as fuel at permitted facilities,
+            or directed to the appropriate downstream handler based on its content and grade.
+          </p>
+          <p>
+            Pines Oil Company ensures that every gallon collected is managed responsibly —
+            no dumping, no illegal disposal, no shortcuts. We maintain full chain-of-custody
+            records and can provide documentation for your compliance files on request.
+          </p>
+          <ul style="margin-top:8px; margin-left:0;">
+            <li style="display:flex; gap:12px; margin-bottom:10px; align-items:flex-start; color: var(--gray); font-family: var(--font-body);">
+              <span style="color:var(--accent); font-weight:700; flex-shrink:0;">—</span>
+              Re-refining into base oil lubricants
+            </li>
+            <li style="display:flex; gap:12px; margin-bottom:10px; align-items:flex-start; color: var(--gray); font-family: var(--font-body);">
+              <span style="color:var(--accent); font-weight:700; flex-shrink:0;">—</span>
+              Fuel blending for permitted industrial burners
+            </li>
+            <li style="display:flex; gap:12px; align-items:flex-start; color: var(--gray); font-family: var(--font-body);">
+              <span style="color:var(--accent); font-weight:700; flex-shrink:0;">—</span>
+              Full documentation provided for your records
+            </li>
+          </ul>
+        </div>
+        <div class="intro-visual" style="background: #0d3a2c;">
+          <div class="intro-visual__inner">
+            <div class="intro-visual__mark">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <polyline points="23 4 23 10 17 10"/>
+                <polyline points="1 20 1 14 7 14"/>
+                <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>
+              </svg>
+            </div>
+            <div class="intro-visual__caption">Recycling &amp; Re-refining</div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA BAND -->
-  <section class="cta-band">
+  <!-- ── CTA ────────────────────────────────────────────── -->
+  <div class="cta-banner">
     <div class="container">
-      <div class="cta-band-inner reveal">
-        <h2>Not sure which service<br/>fits your needs?</h2>
-        <a href="contact.html" class="btn btn-gold btn-glow">Talk to Our Team</a>
-      </div>
+      <h2>Interested in Any of These Services?</h2>
+      <p>Reach out and we'll discuss a collection and recycling plan suited to your specific operation.</p>
+      <a href="contact.html" class="btn btn--primary">Contact Us Today</a>
     </div>
-  </section>
+  </div>
 
-  <!-- FOOTER -->
+  <!-- ── Footer ─────────────────────────────────────────── -->
   <footer class="footer">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <span class="nav-logo"><span class="logo-pine">&#9698;</span> Pines Oil Co.</span>
-        <p>Sustainable. Local. Reliable.</p>
+    <div class="container">
+      <div class="footer__inner">
+        <div>
+          <div class="footer__brand-name">Pines Oil Company</div>
+          <p class="footer__brand-desc">Professional used oil collection, biodiesel production, and recycling services for commercial and industrial operations.</p>
+        </div>
+        <div class="footer__col">
+          <h4>Pages</h4>
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="how-it-works.html">How It Works</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer__col">
+          <h4>Contact</h4>
+          <a href="tel:+15550000000">(555) 000-0000</a>
+          <a href="mailto:info@pinesoil.com">info@pinesoil.com</a>
+          <a href="contact.html">Send a Message</a>
+        </div>
       </div>
-      <nav class="footer-nav">
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="how-it-works.html">How It Works</a>
-        <a href="advantages.html">Advantages</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-      <div class="footer-contact">
-        <p>📍 Athens, Texas</p>
-        <p>📞 <a href="tel:+19727407232">(972) 740-7232</a></p>
-        <p>✉️ <a href="mailto:hello@pinesoilcompany.com">hello@pinesoilcompany.com</a></p>
+      <div class="footer__bottom">
+        <span>&copy; 2025 Pines Oil Company. All rights reserved.</span>
+        <span class="footer__accent">Used Oil Recycling &amp; Biodiesel</span>
       </div>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2026 Pines Oil Company. All rights reserved.</p>
     </div>
   </footer>
 

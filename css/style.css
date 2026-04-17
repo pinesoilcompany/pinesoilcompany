@@ -1,19 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Source+Sans+3:wght@300;400;500;600&family=Bebas+Neue&display=swap');
 
 :root {
-  --forest:    #08132a;
-  --pine:      #102040;
-  --fern:      #1a3560;
-  --sage:      #3a6fba;
-  --mist:      #90b4d8;
-  --cream:     #f0f4fa;
-  --parchment: #e2eaf5;
-  --gold:      #b80a2a;
-  --gold-lt:   #d42040;
-  --charcoal:  #121828;
-  --mid:       #3c4a6a;
-  --light:     #f5f8fd;
-  --white:     #ffffff;
+  --midnight-navy:          #08132a;
+  --deep-navy-blue:         #102040;
+  --dark-denim-blue:        #1a3560;
+  --muted-royal-blue:       #3a6fba;
+  --soft-sky-blue:          #90b4d8;
+  --ice-white:              #f0f4fa;
+  --pale-blue-gray:         #e2eaf5;
+  --deep-crimson:           #b80a2a;
+  --bright-crimson:         #d42040;
+  --midnight-blue-black:    #121828;
+  --slate-blue:             #3c4a6a;
+  --soft-ice-white:         #f5f8fd;
+  --white:                  #ffffff;
   --border:    rgba(26,53,96,0.2);
   --border-gold: rgba(184,10,42,0.35);
   --shadow:    0 4px 32px rgba(0,0,0,0.18);

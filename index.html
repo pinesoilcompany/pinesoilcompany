@@ -3,40 +3,108 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Pines Oil Company processes waste cooking oil from East Texas restaurants into high-quality off-road biodiesel. Serving Athens, Lindale, Van, and surrounding communities.">
-  <title>Pines Oil Company | Biodiesel Production</title>
+  <title>Pines Energy Group LLC | Diversified Energy and Fuel Operations</title>
+  <meta name="description" content="Pines Energy Group LLC is a privately held energy company operating four divisions: Pines Fuel Brokerage, Pines USA, Pines Green, and Pines Holdings. Commercial fuel supply, oil and gas, biodiesel production, used cooking oil recovery, and long-term industrial investments.">
+  <link rel="canonical" href="https://pinesoilcompany.github.io/pinesoilcompany/">
+  <meta name="theme-color" content="#08132a">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Pines Energy Group LLC">
+  <meta property="og:title" content="Pines Energy Group LLC | Diversified Energy and Fuel Operations">
+  <meta property="og:description" content="A privately held energy company operating four divisions: fuel brokerage, oil and gas and biodiesel, used cooking oil recovery, and long-term industrial holdings.">
+  <meta property="og:url" content="https://pinesoilcompany.github.io/pinesoilcompany/">
+  <meta property="og:image" content="https://pinesoilcompany.github.io/pinesoilcompany/images/og-cover.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Pines Energy Group LLC">
+  <meta name="twitter:description" content="Diversified energy and fuel operations. Fuel brokerage, oil and gas, biodiesel, used cooking oil recovery, and industrial holdings.">
+  <meta name="twitter:image" content="https://pinesoilcompany.github.io/pinesoilcompany/images/og-cover.jpg">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="css/style.css">
-  <style>
-    .fade-up { opacity: 0; transform: translateY(28px); transition: opacity 0.6s ease, transform 0.6s ease; }
-    .fade-up.visible { opacity: 1; transform: translateY(0); }
-    .fade-up:nth-child(2) { transition-delay: 0.1s; }
-    .fade-up:nth-child(3) { transition-delay: 0.2s; }
-    .fade-up:nth-child(4) { transition-delay: 0.3s; }
-  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://pinesoilcompany.github.io/pinesoilcompany/#organization",
+    "name": "Pines Energy Group LLC",
+    "alternateName": "Pines Energy Group",
+    "url": "https://pinesoilcompany.github.io/pinesoilcompany/",
+    "logo": "https://pinesoilcompany.github.io/pinesoilcompany/images/og-cover.jpg",
+    "description": "Pines Energy Group LLC is a privately held energy company operating divisions in commercial fuel brokerage, oil and gas, biodiesel production, used cooking oil recovery, and long-term industrial holdings.",
+    "email": "pinesenergy@mesquitedata.com",
+    "telephone": "+1-512-640-9102",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Athens",
+      "addressRegion": "TX",
+      "addressCountry": "US"
+    },
+    "contactPoint": [{
+      "@type": "ContactPoint",
+      "contactType": "sales",
+      "telephone": "+1-512-640-9102",
+      "email": "pinesenergy@mesquitedata.com",
+      "areaServed": "US",
+      "availableLanguage": "English"
+    }],
+    "subOrganization": [
+      {
+        "@type": "Organization",
+        "name": "Pines Fuel Brokerage",
+        "url": "https://pinesoilcompany.github.io/pinesoilcompany/pages/fuel-brokerage.html",
+        "description": "Commercial fuel procurement and supplier network."
+      },
+      {
+        "@type": "Organization",
+        "name": "Pines USA",
+        "url": "https://pinesoilcompany.github.io/pinesoilcompany/pages/pines-usa.html",
+        "description": "Oil and gas and biodiesel operations."
+      },
+      {
+        "@type": "Organization",
+        "name": "Pines Green",
+        "url": "https://pinesoilcompany.github.io/pinesoilcompany/pages/pines-green.html",
+        "description": "Used cooking oil collection, recycling, and renewable feedstock operations."
+      },
+      {
+        "@type": "Organization",
+        "name": "Pines Holdings",
+        "url": "https://pinesoilcompany.github.io/pinesoilcompany/pages/holdings.html",
+        "description": "Strategic investments, acquisitions, and ownership of operating companies."
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
 
   <!-- NAVBAR -->
   <nav id="navbar">
     <div class="container nav-inner">
       <a href="index.html" class="wordmark">
-        <span class="wordmark-top">Pines Oil Company</span>
+        <span class="wordmark-top">Pines Energy Group</span>
         <span class="wordmark-sub">Athens, Texas</span>
       </a>
       <ul class="nav-links" id="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="pages/restaurants.html">For Restaurants</a></li>
-        <li><a href="pages/farmers.html">For Buyers</a></li>
+        <li><a href="index.html" class="active" aria-current="page">Home</a></li>
         <li><a href="pages/about.html">About</a></li>
-        <li><a href="#contact" class="nav-cta">Contact Us</a></li>
+        <li><a href="pages/fuel-brokerage.html">Fuel Brokerage</a></li>
+        <li><a href="pages/pines-usa.html">Pines USA</a></li>
+        <li><a href="pages/pines-green.html">Pines Green</a></li>
+        <li><a href="pages/holdings.html">Pines Holdings</a></li>
+        <li><a href="pages/contact.html" class="nav-cta">Contact</a></li>
       </ul>
-      <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-controls="nav-links" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
+
+  <main id="main">
 
   <!-- HERO -->
   <section id="hero">
@@ -44,32 +112,32 @@
     <div class="hero-accent"></div>
     <div class="container">
       <div class="hero-content">
-        <div class="hero-eyebrow">East Texas Biodiesel Production</div>
+        <div class="hero-eyebrow">Pines Energy Group LLC</div>
         <h1 class="hero-title">
-          Turning Waste Oil<br>Into <span>American Fuel</span>
+          Diversified Energy<br>and <span>Fuel Operations</span>
         </h1>
         <p class="hero-body">
-          Pines Oil Company partners with local restaurants, collects used cooking oil at no charge, and processes it into high performance off-road biodiesel at our Athens, Texas facility. Built on Texas values. Fueling East Texas farms.
+          Pines Energy Group LLC is a privately held energy company headquartered in Athens, Texas. Our divisions supply commercial fuel, operate in oil and gas, produce biodiesel, recover used cooking oil for renewable feedstock, and hold long-term interests in energy and industrial businesses.
         </p>
         <div class="hero-actions">
-          <a href="pages/restaurants.html" class="btn btn-primary">Donate Your Waste Oil</a>
-          <a href="pages/farmers.html" class="btn btn-outline">Buy Biodiesel</a>
+          <a href="#divisions" class="btn btn-primary">Our Divisions</a>
+          <a href="pages/fuel-brokerage.html" class="btn btn-outline">Request Fuel Pricing</a>
         </div>
       </div>
     </div>
     <div class="container">
       <div class="hero-stats">
         <div class="stat-block">
-          <span class="stat-num">100%</span>
-          <span class="stat-label">Free Pickup</span>
+          <span class="stat-num">04</span>
+          <span class="stat-label">Operating Divisions</span>
         </div>
         <div class="stat-block">
-          <span class="stat-num">East TX</span>
-          <span class="stat-label">Sourced &amp; Produced</span>
+          <span class="stat-num">National</span>
+          <span class="stat-label">Supplier Network</span>
         </div>
         <div class="stat-block">
-          <span class="stat-num">B100</span>
-          <span class="stat-label">Off-Road Biodiesel</span>
+          <span class="stat-num">Athens, TX</span>
+          <span class="stat-label">Headquarters</span>
         </div>
       </div>
     </div>
@@ -77,277 +145,303 @@
 
   <!-- TICKER STRIP -->
   <div class="banner-strip">
-    <div class="banner-ticker">
-      <span>Free Waste Oil Pickup<span class="dot">|</span></span>
-      <span>Athens, Texas Processing Plant<span class="dot">|</span></span>
-      <span>Serving East Texass<span class="dot">|</span></span>
-      <span>Off-Road Biodiesel for Farmers and Ranchers<span class="dot">|</span></span>
-      <span>Local. Clean. American.<span class="dot">|</span></span>
-      <span>Free Waste Oil Pickup<span class="dot">|</span></span>
-      <span>Athens, Texas Processing Plant<span class="dot">|</span></span>
-      <span>Serving East Texas<span class="dot">|</span></span>
-      <span>Off-Road Biodiesel for Farmers and Ranchers<span class="dot">|</span></span>
-      <span>Local. Clean. American.<span class="dot">|</span></span>
+    <div class="banner-ticker" aria-hidden="true">
+      <span>Commercial Fuel Supply<span class="dot">|</span></span>
+      <span>Bulk Diesel and Gasoline<span class="dot">|</span></span>
+      <span>DEF Sourcing<span class="dot">|</span></span>
+      <span>Fleet and Construction Fueling<span class="dot">|</span></span>
+      <span>Used Cooking Oil Collection<span class="dot">|</span></span>
+      <span>Biodiesel Production<span class="dot">|</span></span>
+      <span>Commercial Fuel Supply<span class="dot">|</span></span>
+      <span>Bulk Diesel and Gasoline<span class="dot">|</span></span>
+      <span>DEF Sourcing<span class="dot">|</span></span>
+      <span>Fleet and Construction Fueling<span class="dot">|</span></span>
+      <span>Used Cooking Oil Collection<span class="dot">|</span></span>
+      <span>Biodiesel Production<span class="dot">|</span></span>
     </div>
   </div>
 
-  <!-- WHO WE SERVE -->
-  <section id="serve">
+  <!-- COMPANY OVERVIEW -->
+  <section class="content-section" id="overview">
     <div class="container">
-      <div style="text-align:center; margin-bottom:0;">
-        <span class="section-label">Who We Work With</span>
-        <h2 class="section-title">A Company Built for<br>This Community</h2>
-        <div class="divider center"></div>
-      </div>
-      <div class="serve-grid">
-        <div class="serve-card fade-up">
-          <div class="serve-icon">
-            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="4" y="18" width="40" height="26" rx="1" stroke="#2d4a2d" stroke-width="2"/>
-              <path d="M4 18L24 6L44 18" stroke="#2d4a2d" stroke-width="2"/>
-              <rect x="18" y="28" width="12" height="16" stroke="#b8960c" stroke-width="1.5"/>
-              <circle cx="24" cy="22" r="3" stroke="#b8960c" stroke-width="1.5"/>
-            </svg>
-          </div>
-          <h3>Restaurants and Food Service</h3>
-          <p>We pick up your used fryer oil and cooking grease on a scheduled basis, at absolutely no cost to you. No storage hassles, no disposal fees, & no paperwork. We handle everything.</p>
-          <a href="pages/restaurants.html" class="card-link">Learn About Pickup <span>&#8594;</span></a>
+      <div class="two-col">
+        <div>
+          <span class="section-label">The Company</span>
+          <h2 class="section-title">One Group,<br>Four Operating Divisions</h2>
+          <div class="divider"></div>
+          <p class="body-text">
+            Pines Energy Group LLC was formed to hold and operate a set of related energy businesses under common ownership. Each division runs its own operations and serves its own customers, and each is accountable to the same standards for supply reliability, pricing transparency, and follow through.
+          </p>
+          <p class="body-text" style="margin-top:16px;">
+            The group started in fuel production and has grown into procurement, recovery, and ownership. Commercial buyers can source fuel through the brokerage, producers and fleets can work with Pines USA, food service operators can schedule collection through Pines Green, and business owners can talk to Pines Holdings about acquisition and investment.
+          </p>
+          <p class="body-text" style="margin-top:16px;">
+            We keep the structure simple on purpose. One point of contact, direct answers on availability and pricing, and a division that owns the work from the first call through delivery.
+          </p>
+          <a href="pages/about.html" style="margin-top:36px;display:inline-block;" class="btn btn-outline-dark">About the Group</a>
         </div>
-        <div class="serve-card fade-up">
-          <div class="serve-icon">
-            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M6 36L18 20L28 28L38 14" stroke="#2d4a2d" stroke-width="2" stroke-linecap="round"/>
-              <circle cx="38" cy="14" r="3" fill="#b8960c"/>
-              <path d="M4 40H44" stroke="#2d4a2d" stroke-width="2"/>
-              <rect x="10" y="30" width="8" height="10" stroke="#b8960c" stroke-width="1.5"/>
-              <rect x="22" y="24" width="8" height="16" stroke="#b8960c" stroke-width="1.5"/>
-            </svg>
+        <div>
+          <div class="structure-parent">
+            <h3>Pines Energy Group LLC</h3>
+            <p>Parent company overseeing multiple energy and industrial businesses. The group holds ownership of each operating division, sets standards across them, and directs capital toward growth.</p>
           </div>
-          <h3>Farmers and Ranchers</h3>
-          <p>East Texas agriculture runs on diesel. Our off-road biodiesel is a clean, locally produced alternative for tractors, irrigation equipment, and any non-road diesel application on your operation.</p>
-          <a href="pages/farmers.html" class="card-link">View Product Info <span>&#8594;</span></a>
-        </div>
-        <div class="serve-card fade-up">
-          <div class="serve-icon">
-            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="24" cy="18" r="8" stroke="#2d4a2d" stroke-width="2"/>
-              <path d="M8 42c0-8.837 7.163-16 16-16s16 7.163 16 16" stroke="#2d4a2d" stroke-width="2" stroke-linecap="round"/>
-              <path d="M32 22l6 4M36 18l4 8" stroke="#b8960c" stroke-width="1.5" stroke-linecap="round"/>
-            </svg>
-          </div>
-          <h3>Investors and Business Partners</h3>
-          <p>Pines Oil Company operates at the intersection of agricultural waste reduction and domestic fuel production. We welcome conversations with investors and partners who see the long-term value in this market.</p>
-          <a href="pages/about.html" class="card-link">Company Overview <span>&#8594;</span></a>
+          <dl class="detail-rows">
+            <div class="detail-row">
+              <dt>Legal Entity</dt>
+              <dd>Pines Energy Group LLC</dd>
+            </div>
+            <div class="detail-row">
+              <dt>Headquarters</dt>
+              <dd>Athens, Texas</dd>
+            </div>
+            <div class="detail-row">
+              <dt>Ownership</dt>
+              <dd>Privately held</dd>
+            </div>
+            <div class="detail-row">
+              <dt>Divisions</dt>
+              <dd>Pines Fuel Brokerage, Pines USA, Pines Green, Pines Holdings</dd>
+            </div>
+            <div class="detail-row">
+              <dt>Coverage</dt>
+              <dd>Texas operations base with a national supplier network</dd>
+            </div>
+          </dl>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- HOW IT WORKS -->
-  <section id="process">
+  <!-- OPERATING DIVISIONS -->
+  <section id="divisions">
+    <div class="container">
+      <div class="section-intro center">
+        <span class="section-label">Operating Divisions</span>
+        <h2 class="section-title">What Each Division Does</h2>
+        <div class="divider center"></div>
+        <p class="body-text">
+          Four businesses, each with a defined scope. Select a division to see its services, the markets it serves, and how to start a conversation.
+        </p>
+      </div>
+      <div class="division-grid">
+
+        <div class="division-card acc-brokerage fade-up">
+          <span class="division-eyebrow">Division 01</span>
+          <h3>Pines Fuel Brokerage</h3>
+          <p>Commercial fuel procurement and supplier network. We connect commercial buyers with qualified suppliers for bulk diesel, gasoline, DEF, and on site fueling, and we manage the sourcing work that sits behind those agreements.</p>
+          <ul class="division-points">
+            <li>Bulk Diesel</li>
+            <li>Gasoline</li>
+            <li>DEF</li>
+            <li>Fleet Fueling</li>
+          </ul>
+          <a href="pages/fuel-brokerage.html" class="btn btn-outline-dark">Fuel Brokerage</a>
+        </div>
+
+        <div class="division-card acc-usa fade-up">
+          <span class="division-eyebrow">Division 02</span>
+          <h3>Pines USA</h3>
+          <p>Oil and gas and biodiesel operations. Pines USA covers the group's traditional energy business, including fuel products, energy services, commercial fuel markets, and biodiesel production at our Athens facility.</p>
+          <ul class="division-points">
+            <li>Oil and Gas</li>
+            <li>Fuel Products</li>
+            <li>Energy Services</li>
+            <li>Biodiesel</li>
+          </ul>
+          <a href="pages/pines-usa.html" class="btn btn-outline-dark">Pines USA</a>
+        </div>
+
+        <div class="division-card acc-green fade-up">
+          <span class="division-eyebrow">Division 03</span>
+          <h3>Pines Green</h3>
+          <p>Used cooking oil collection, recycling, and renewable feedstock operations. We collect from restaurants, commercial kitchens, schools, and food service operations on a set schedule and supply containers at no charge.</p>
+          <ul class="division-points">
+            <li>Scheduled Collection</li>
+            <li>Container Service</li>
+            <li>Recycling</li>
+            <li>Feedstock Recovery</li>
+          </ul>
+          <a href="pages/pines-green.html" class="btn btn-outline-dark">Pines Green</a>
+        </div>
+
+        <div class="division-card acc-holdings fade-up">
+          <span class="division-eyebrow">Division 04</span>
+          <h3>Pines Holdings</h3>
+          <p>Strategic investments, acquisitions, and ownership of operating companies. Pines Holdings manages the group's ownership interests in the energy and industrial sectors and evaluates acquisitions on a long-term basis.</p>
+          <ul class="division-points">
+            <li>Acquisitions</li>
+            <li>Private Holdings</li>
+            <li>Long-Term Ownership</li>
+            <li>Growth Capital</li>
+          </ul>
+          <a href="pages/holdings.html" class="btn btn-outline-dark">Pines Holdings</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- INDUSTRIES SERVED -->
+  <section id="industries">
+    <div class="container">
+      <div class="section-intro">
+        <span class="section-label">Industries Served</span>
+        <h2 class="section-title">Markets We Supply</h2>
+        <div class="divider"></div>
+        <p class="body-text">
+          Our customers run equipment, fleets, and facilities that cannot afford a fuel gap. The divisions serve these markets directly and through the supplier network.
+        </p>
+      </div>
+      <div class="industry-grid">
+        <div class="industry-item">
+          <span class="bar" aria-hidden="true"></span>
+          <div><strong>Construction</strong><span>On site fueling for equipment and generators</span></div>
+        </div>
+        <div class="industry-item">
+          <span class="bar" aria-hidden="true"></span>
+          <div><strong>Transportation</strong><span>Bulk diesel, DEF, and fleet fueling programs</span></div>
+        </div>
+        <div class="industry-item">
+          <span class="bar" aria-hidden="true"></span>
+          <div><strong>Agriculture</strong><span>Off-road diesel and biodiesel for farm operations</span></div>
+        </div>
+        <div class="industry-item">
+          <span class="bar" aria-hidden="true"></span>
+          <div><strong>Industrial Manufacturing</strong><span>Plant fuel supply and standby generator fills</span></div>
+        </div>
+        <div class="industry-item">
+          <span class="bar" aria-hidden="true"></span>
+          <div><strong>Government</strong><span>Contract fuel supply for public agencies</span></div>
+        </div>
+        <div class="industry-item">
+          <span class="bar" aria-hidden="true"></span>
+          <div><strong>Municipal Fleets</strong><span>Scheduled deliveries for city and county vehicles</span></div>
+        </div>
+        <div class="industry-item">
+          <span class="bar" aria-hidden="true"></span>
+          <div><strong>Energy</strong><span>Fuel products and supply agreements for operators</span></div>
+        </div>
+        <div class="industry-item">
+          <span class="bar" aria-hidden="true"></span>
+          <div><strong>Oilfield Services</strong><span>Field delivery for rigs, pumps, and support fleets</span></div>
+        </div>
+        <div class="industry-item">
+          <span class="bar" aria-hidden="true"></span>
+          <div><strong>Commercial Business</strong><span>Restaurants, food service, logistics, and utilities</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY PINES -->
+  <section id="why">
     <div class="container">
       <div class="process-header">
         <div>
-          <span class="section-label">Our Process</span>
-          <h2 class="section-title light">From Restaurant Kitchen<br>to Fuel Tank</h2>
+          <span class="section-label">Why Pines</span>
+          <h2 class="section-title light">Why Businesses<br>Work With Us</h2>
           <div class="divider"></div>
         </div>
         <div>
           <p class="body-text light">
-            Every gallon of biodiesel we produce starts as used cooking oil collected from restaurants in the Lindale and Van areas. We transport it to our Athens facility, process and refine it, and deliver a finished fuel product to East Texas agricultural operations.
+            Fuel buyers care about three things: whether the product shows up, what it costs, and who answers the phone when something changes. Those are the terms we compete on.
           </p>
-          <a href="pages/about.html" style="margin-top:28px;display:inline-block;" class="btn btn-outline">About Our Operation</a>
+          <a href="pages/contact.html" style="margin-top:28px;display:inline-block;" class="btn btn-outline">Talk to a Division</a>
         </div>
       </div>
-      <div class="process-steps">
-        <div class="step">
-          <span class="step-num">01</span>
-          <h4>Collection</h4>
-          <p>We schedule regular pickups from partner restaurants in Lindale, Van, and surrounding East Texas communities. Pickup is always free of charge.</p>
-          <span class="step-arrow">&#8594;</span>
+      <div class="reason-grid">
+        <div class="reason-card fade-up">
+          <span class="reason-num">01</span>
+          <h4>Supply Reliability</h4>
+          <p>Multiple qualified suppliers per product and region, so a single terminal outage or a carrier delay does not stop your delivery.</p>
         </div>
-        <div class="step">
-          <span class="step-num">02</span>
-          <h4>Transport</h4>
-          <p>Collected oil is transported to our processing plant in Athens, Texas, where it undergoes quality intake inspection and storage.</p>
-          <span class="step-arrow">&#8594;</span>
+        <div class="reason-card fade-up">
+          <span class="reason-num">02</span>
+          <h4>Direct Pricing</h4>
+          <p>Quotes reflect the index, the freight, and our margin. You see how the number is built and what moves it week to week.</p>
         </div>
-        <div class="step">
-          <span class="step-num">03</span>
-          <h4>Processing</h4>
-          <p>The raw oil is filtered, processed through transesterification, and refined into off-road biodiesel that meets specification for agricultural and industrial use.</p>
-          <span class="step-arrow">&#8594;</span>
+        <div class="reason-card fade-up">
+          <span class="reason-num">03</span>
+          <h4>One Point of Contact</h4>
+          <p>You work with the division that owns your account. No transfers between call centers and no ticket queues to chase.</p>
         </div>
-        <div class="step">
-          <span class="step-num">04</span>
-          <h4>Distribution</h4>
-          <p>Finished biodiesel is made available to farmers, ranchers, and other qualifying buyers across East Texas for use in off-road diesel equipment.</p>
+        <div class="reason-card fade-up">
+          <span class="reason-num">04</span>
+          <h4>Full Chain Control</h4>
+          <p>The group collects feedstock, produces fuel, and brokers supply. That range gives us options when one part of the market tightens.</p>
+        </div>
+        <div class="reason-card fade-up">
+          <span class="reason-num">05</span>
+          <h4>Compliance and Documentation</h4>
+          <p>Collection manifests, product documentation, and delivery records are kept and provided on request for your own recordkeeping.</p>
+        </div>
+        <div class="reason-card fade-up">
+          <span class="reason-num">06</span>
+          <h4>Long-Term Agreements</h4>
+          <p>Spot purchases and multi-year supply contracts are both available. We price and structure for the term you actually need.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ABOUT PREVIEW -->
-  <section id="about-preview">
+  <!-- NEWS AND FEATURED WORK -->
+  <!-- PLACEHOLDER SECTION: replace these three cards with real announcements,
+       project write-ups, or press items as they become available. -->
+  <section id="news">
     <div class="container">
-      <div class="about-grid">
-        <div class="about-image-wrap">
-          <div class="about-img-placeholder">
-            <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="40" cy="28" r="14" stroke="#a8c5a8" stroke-width="2"/>
-              <path d="M12 72c0-15.464 12.536-28 28-28s28 12.536 28 28" stroke="#a8c5a8" stroke-width="2"/>
-            </svg>
-          </div>
-          <div class="about-img-border"></div>
-        </div>
-        <div>
-          <span class="section-label">About the Company</span>
-          <h2 class="section-title">Rooted in East Texas,<br>Built to Last</h2>
-          <div class="divider"></div>
-          <p class="body-text">
-            Pines Oil Company was founded on a straightforward premise: East Texas restaurants produce thousands of gallons of waste oil every year, and East Texas farms burn thousands of gallons of diesel. We bridge that gap.
-          </p>
-          <p class="body-text" style="margin-top:16px;">
-            Our processing plant in Athens, Texas handles every step of production in-house. We collect, process, and distribute locally, keeping resources and economic activity within our region.
-          </p>
-          <div class="about-facts">
-            <div class="fact-row">
-              <span class="fact-label">Location</span>
-              <span class="fact-value">Athens, Texas (Processing Plant)</span>
-            </div>
-            <div class="fact-row">
-              <span class="fact-label">Service Area</span>
-              <span class="fact-value">Lindale, Van, and East Texas</span>
-            </div>
-            <div class="fact-row">
-              <span class="fact-label">Product</span>
-              <span class="fact-value">Off-Road Biodiesel (B100)</span>
-            </div>
-            <div class="fact-row">
-              <span class="fact-label">Pickup Cost</span>
-              <span class="fact-value">Always Free to Restaurant Partners</span>
-            </div>
-          </div>
-          <a href="pages/about.html" style="margin-top:36px;display:inline-block;" class="btn btn-outline-dark">Full Company Profile</a>
-        </div>
+      <div class="section-intro">
+        <span class="section-label">Company Updates</span>
+        <h2 class="section-title">Recent Activity</h2>
+        <div class="divider"></div>
+        <p class="body-text">
+          Notes on the group's operations, division activity, and capacity. Contact us directly for current availability and pricing.
+        </p>
+      </div>
+      <div class="news-grid">
+        <article class="news-card fade-up">
+          <span class="news-meta">Group Structure</span>
+          <h4>Pines Energy Group LLC Formalizes Division Structure</h4>
+          <p>The group's operations are organized under four divisions: Pines Fuel Brokerage, Pines USA, Pines Green, and Pines Holdings. Each division carries its own scope, customers, and point of contact.</p>
+          <a href="pages/about.html" class="card-link">Read the Overview <span aria-hidden="true">&#8594;</span></a>
+        </article>
+        <article class="news-card fade-up">
+          <span class="news-meta">Fuel Brokerage</span>
+          <h4>Supplier Network Open for Commercial Fuel Requests</h4>
+          <p>Pines Fuel Brokerage is accepting requests for bulk diesel, gasoline, DEF, fleet fueling, and construction site fueling. Send volumes, locations, and delivery windows for a quote.</p>
+          <a href="pages/fuel-brokerage.html" class="card-link">Request Pricing <span aria-hidden="true">&#8594;</span></a>
+        </article>
+        <article class="news-card fade-up">
+          <span class="news-meta">Pines Green</span>
+          <h4>Collection Routes Accepting New Food Service Accounts</h4>
+          <p>Pines Green is adding restaurants, commercial kitchens, schools, and food service operations to its scheduled used cooking oil collection routes. Containers and pickup are provided at no charge.</p>
+          <a href="pages/pines-green.html" class="card-link">Schedule Collection <span aria-hidden="true">&#8594;</span></a>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- PARTNER CTA -->
+  <!-- CONTACT CTA -->
   <section id="partner-cta">
+    <span id="contact" class="anchor-offset"></span>
     <div class="cta-lines"></div>
     <div class="container">
       <div class="cta-inner">
-        <span class="section-label">Get Started</span>
-        <h2 class="section-title light">Ready to Work Together?</h2>
+        <span class="section-label">Get in Touch</span>
+        <h2 class="section-title light">Tell Us What You Need Supplied</h2>
         <div class="divider center"></div>
         <p class="body-text light">
-          Whether you run a restaurant and want to stop paying for grease disposal, or you operate a farm and need a reliable local fuel supplier, we want to hear from you.
+          Send your volumes, locations, and delivery schedule and we will route the request to the division that handles it. For collection service, acquisitions, or general questions, the same contact page covers all four divisions.
         </p>
         <div class="cta-actions">
-          <a href="pages/restaurants.html" class="btn btn-primary">Restaurant Inquiry</a>
-          <a href="pages/farmers.html" class="btn btn-outline">Buyer Inquiry</a>
-          <a href="#contact" class="btn btn-outline">General Contact</a>
+          <a href="tel:+15126409102" class="btn btn-primary">(512) 640-9102</a>
+          <a href="pages/contact.html" class="btn btn-outline">Contact the Group</a>
+          <a href="mailto:pinesenergy@mesquitedata.com" class="btn btn-outline">Email Us</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <section id="contact">
-    <div class="container">
-      <div style="margin-bottom:60px;">
-        <span class="section-label">Contact</span>
-        <h2 class="section-title">Get in Touch</h2>
-        <div class="divider"></div>
-      </div>
-      <div class="contact-grid">
-        <div class="contact-info">
-          <h3>Pines Oil Company</h3>
-          <div class="contact-item">
-            <div class="contact-icon">
-              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/>
-              </svg>
-            </div>
-            <div class="contact-item-body">
-              <strong>Phone</strong>
-              <a href="tel:+15126409102">(512) 640-9102</a>
-            </div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-icon">
-              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                <polyline points="22,6 12,13 2,6"/>
-              </svg>
-            </div>
-            <div class="contact-item-body">
-              <strong>Email</strong>
-              <a href="mailto:pinesenergy@mesquitedata.com">pinesenergy@mesquitedata.com</a>
-            </div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-icon">
-              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
-                <circle cx="12" cy="10" r="3"/>
-              </svg>
-            </div>
-            <div class="contact-item-body">
-              <strong>Processing Plant</strong>
-              Athens, Texas
-            </div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-icon">
-              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10"/>
-                <polyline points="12 6 12 12 16 14"/>
-              </svg>
-            </div>
-            <div class="contact-item-body">
-              <strong>Pickup Area</strong>
-              Lindale, Van, and surrounding East Texas communities
-            </div>
-          </div>
-        </div>
-
-        <form class="contact-form" id="contact-form" novalidate>
-          <div class="form-row">
-            <div class="field">
-              <label for="name">Full Name</label>
-              <input type="text" id="name" name="name" placeholder="Your name" required>
-            </div>
-            <div class="field">
-              <label for="email">Email Address</label>
-              <input type="email" id="email" name="email" placeholder="your@email.com" required>
-            </div>
-          </div>
-          <div class="field">
-            <label for="subject">I am a</label>
-            <select id="subject" name="subject" required>
-              <option value="" disabled selected>Select your inquiry type</option>
-              <option value="Restaurant - Waste Oil Pickup">Restaurant or Food Service - Waste Oil Pickup</option>
-              <option value="Farmer/Rancher - Biodiesel Purchase">Farmer or Rancher - Biodiesel Purchase Inquiry</option>
-              <option value="Investor/Business Inquiry">Investor or Business Inquiry</option>
-              <option value="General Information">General Information</option>
-              <option value="Other">Other</option>
-            </select>
-          </div>
-          <div class="field">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" placeholder="Tell us about your needs or questions..." required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary" style="align-self:flex-start;">Send Message</button>
-          <div class="form-success" id="form-success">
-            Your message has been received. We will be in touch shortly.
-          </div>
-        </form>
-      </div>
-    </div>
-  </section>
+  </main>
 
   <!-- FOOTER -->
   <footer>
@@ -355,32 +449,42 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="index.html" class="wordmark">
-            <span class="wordmark-top">Pines Oil Company</span>
+            <span class="wordmark-top">Pines Energy Group</span>
             <span class="wordmark-sub">Athens, Texas</span>
           </a>
-          <p class="footer-desc">East Texas biodiesel production. We collect waste cooking oil from local restaurants and process it into high-performance off-road biodiesel for farms and ranches across our region.</p>
+          <p class="footer-desc">A privately held energy company operating in commercial fuel brokerage, oil and gas, biodiesel production, used cooking oil recovery, and long-term industrial holdings.</p>
+          <p class="footer-legal">Pines Energy Group LLC<br>Athens, Texas, United States</p>
         </div>
         <div class="footer-col">
-          <h5>Company</h5>
+          <h5>Quick Links</h5>
           <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="pages/about.html">About Us</a></li>
-            <li><a href="pages/about.html#process-detail">Our Process</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="pages/about.html">About</a></li>
+            <li><a href="#industries">Industries Served</a></li>
+            <li><a href="pages/contact.html">Contact</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h5>Services</h5>
+          <h5>Operating Divisions</h5>
           <ul>
-            <li><a href="pages/restaurants.html">Restaurant Pickup Program</a></li>
-            <li><a href="pages/farmers.html">Biodiesel for Buyers</a></li>
-            <li><a href="pages/farmers.html#product">Product Specifications</a></li>
-            <li><a href="#contact">Investor Relations</a></li>
+            <li><a href="pages/fuel-brokerage.html" class="acc-brokerage"><span class="fdot" aria-hidden="true"></span>Pines Fuel Brokerage</a></li>
+            <li><a href="pages/pines-usa.html" class="acc-usa"><span class="fdot" aria-hidden="true"></span>Pines USA</a></li>
+            <li><a href="pages/pines-green.html" class="acc-green"><span class="fdot" aria-hidden="true"></span>Pines Green</a></li>
+            <li><a href="pages/holdings.html" class="acc-holdings"><span class="fdot" aria-hidden="true"></span>Pines Holdings</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Contact</h5>
+          <ul class="footer-contact">
+            <li><a href="tel:+15126409102">(512) 640-9102</a></li>
+            <li><a href="mailto:pinesenergy@mesquitedata.com">pinesenergy@mesquitedata.com</a></li>
+            <li>Headquarters<br>Athens, Texas</li>
+            <li>Monday to Friday<br>7:00 AM to 5:00 PM Central</li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <span>&copy; 2026 Pines Oil Company. All rights reserved. Athens, Texas.</span>
+        <span>&copy; 2026 Pines Energy Group LLC. All rights reserved.</span>
         <span>
           <a href="tel:+15126409102">(512) 640-9102</a>
           &nbsp;&nbsp;|&nbsp;&nbsp;

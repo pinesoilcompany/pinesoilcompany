@@ -3,32 +3,50 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Pines Oil Company produces off-road biodiesel for East Texas farmers, ranchers, and agricultural operations. Locally sourced and processed in Athens, Texas.">
-  <title>Off-Road Biodiesel for Farmers | Pines Oil Company</title>
+  <title>Biodiesel for Buyers | Pines USA</title>
+  <meta name="description" content="Pines USA produces off-road biodiesel from used cooking oil at its Athens, Texas facility. Product specifications, blend information, buyer FAQ, and purchasing. A division of Pines Energy Group LLC.">
+  <link rel="canonical" href="https://pinesoilcompany.github.io/pinesoilcompany/pages/farmers.html">
+  <meta name="theme-color" content="#08132a">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Pines Energy Group LLC">
+  <meta property="og:title" content="Biodiesel for Buyers | Pines USA">
+  <meta property="og:description" content="Off-road biodiesel produced from used cooking oil at the Athens, Texas facility. Specifications, blend information, and purchasing.">
+  <meta property="og:url" content="https://pinesoilcompany.github.io/pinesoilcompany/pages/farmers.html">
+  <meta property="og:image" content="https://pinesoilcompany.github.io/pinesoilcompany/images/og-cover.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Biodiesel for Buyers | Pines USA">
+  <meta name="twitter:description" content="Off-road biodiesel produced from used cooking oil. Specifications and purchasing.">
+  <meta name="twitter:image" content="https://pinesoilcompany.github.io/pinesoilcompany/images/og-cover.jpg">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="../css/style.css">
   <style>
-    .fade-up { opacity: 0; transform: translateY(28px); transition: opacity 0.6s ease, transform 0.6s ease; }
-    .fade-up.visible { opacity: 1; transform: translateY(0); }
+    /* FAQ accordion, specific to this page. */
     .faq-item {
-      border-bottom: 1px solid rgba(90,140,90,0.2);
+      border-bottom: 1px solid var(--border);
       padding: 24px 0;
     }
     .faq-q {
       font-family: 'Playfair Display', serif;
       font-size: 1.08rem;
-      color: #1a2e1a;
+      color: var(--forest);
       cursor: pointer;
       display: flex;
       justify-content: space-between;
       align-items: center;
       gap: 16px;
+      width: 100%;
+      text-align: left;
+      background: none;
+      border: none;
+      padding: 0;
     }
     .faq-q::after {
       content: '+';
       font-size: 1.4rem;
-      color: #b8960c;
+      color: var(--gold);
       flex-shrink: 0;
       transition: transform 0.25s;
     }
@@ -37,45 +55,122 @@
       display: none;
       padding-top: 14px;
       font-size: 0.97rem;
-      color: #4a4a4a;
+      color: var(--mid);
       line-height: 1.8;
     }
     .faq-item.open .faq-a { display: block; }
   </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Off-Road Biodiesel (B100)",
+    "url": "https://pinesoilcompany.github.io/pinesoilcompany/pages/farmers.html",
+    "description": "Off-road biodiesel produced from used cooking oil feedstock at the Athens, Texas facility. Available as B100 or blended to specification for non-road diesel applications.",
+    "category": "Fuel",
+    "brand": {
+      "@type": "Organization",
+      "name": "Pines USA",
+      "url": "https://pinesoilcompany.github.io/pinesoilcompany/pages/pines-usa.html",
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": "Pines Energy Group LLC",
+        "url": "https://pinesoilcompany.github.io/pinesoilcompany/"
+      }
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can I use biodiesel in my existing diesel equipment?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Many diesel engines, particularly those manufactured before 2007, can run on biodiesel blends with little or no modification. Equipment manufactured more recently may have compatibility considerations. Check your equipment manufacturer documentation and contact us to discuss your specific situation before purchasing." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between B100 and blended biodiesel?",
+        "acceptedAnswer": { "@type": "Answer", "text": "B100 is pure biodiesel with no petroleum diesel blended in. A B20 blend is 20 percent biodiesel and 80 percent petroleum diesel. Different blends perform differently across temperatures and equipment types." }
+      },
+      {
+        "@type": "Question",
+        "name": "How does cold weather affect biodiesel performance?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Biodiesel has a higher cloud point than petroleum diesel, meaning it can begin to gel at lower temperatures. In Texas winters this is generally manageable, particularly with blended product. Storage location and blend ratio address most cold weather concerns." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the minimum purchase quantity?",
+        "acceptedAnswer": { "@type": "Answer", "text": "We work with buyers of varying sizes. Contact us to discuss current availability and what purchase arrangement makes sense for your operation." }
+      },
+      {
+        "@type": "Question",
+        "name": "How is the biodiesel priced?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Pricing reflects current feedstock costs, production volume, and market conditions. We do not publish a fixed price list because those factors move. Reach out for a current quote and to discuss volume pricing for larger operations." }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you deliver, or do buyers pick up at the Athens facility?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Both are available depending on your location and volume. Contact us to determine what works best for your operation." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I buy conventional diesel or gasoline from the group as well?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Pines Fuel Brokerage sources bulk diesel, gasoline, DEF, and on site fueling through its supplier network. A single conversation can cover both the biodiesel and the conventional product you need." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I supply used cooking oil instead of buying fuel?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Pines Green collects used cooking oil from restaurants, commercial kitchens, schools, and food service operations at no charge, and supplies the containers." }
+      }
+    ]
+  }
+  </script>
 </head>
-<body>
+<body class="div-usa">
+
+  <a class="skip-link" href="#main">Skip to main content</a>
 
   <!-- NAVBAR -->
   <nav id="navbar" class="scrolled">
     <div class="container nav-inner">
       <a href="../index.html" class="wordmark">
-        <span class="wordmark-top">Pines Oil Company</span>
-        <span class="wordmark-sub">Athens, Texas</span>
+        <span class="wordmark-top">Pines Energy Group</span>
+        <span class="wordmark-sub">Pines USA</span>
       </a>
       <ul class="nav-links" id="nav-links">
         <li><a href="../index.html">Home</a></li>
-        <li><a href="restaurants.html">For Restaurants</a></li>
-        <li><a href="farmers.html">For Buyers</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="../index.html#contact" class="nav-cta">Contact Us</a></li>
+        <li><a href="fuel-brokerage.html">Fuel Brokerage</a></li>
+        <li><a href="pines-usa.html" class="active">Pines USA</a></li>
+        <li><a href="pines-green.html">Pines Green</a></li>
+        <li><a href="holdings.html">Pines Holdings</a></li>
+        <li><a href="contact.html" class="nav-cta">Contact</a></li>
       </ul>
-      <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-controls="nav-links" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
 
+  <main id="main">
+
   <!-- PAGE HERO -->
   <div class="page-hero">
     <div class="container page-hero-inner">
-      <div class="breadcrumb">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
         <a href="../index.html">Home</a>
-        <span>&#8250;</span>
-        <span>For Buyers</span>
-      </div>
-      <span class="section-label">Off-Road Biodiesel</span>
-      <h1>Locally Produced Fuel for<br>East Texas Operations</h1>
-      <p>Pines Oil Company produces off-road biodiesel from locally collected waste cooking oil. Our product is designed for agricultural and industrial non-road diesel applications.</p>
+        <span aria-hidden="true">&#8250;</span>
+        <a href="pines-usa.html">Pines USA</a>
+        <span aria-hidden="true">&#8250;</span>
+        <span>Biodiesel for Buyers</span>
+      </nav>
+      <span class="section-label">Pines USA Biodiesel</span>
+      <h1>Off-Road Biodiesel for<br>Working Operations</h1>
+      <p>Pines USA produces off-road biodiesel from used cooking oil recovered by Pines Green. The product is intended for agricultural and industrial non-road diesel applications.</p>
     </div>
   </div>
 
@@ -88,25 +183,25 @@
           <h2 class="section-title">Off-Road Biodiesel Built<br>for Working Land</h2>
           <div class="divider"></div>
           <p class="body-text">
-            East Texas farms and ranches depend on diesel fuel to operate. Tractors, irrigation pumps, hay equipment, and generators all run on it. Pines Oil Company offers an off-road biodiesel produced right here in our region as an alternative for those non-road applications.
+            Farms, ranches, and construction operations depend on diesel to work. Tractors, irrigation pumps, hay equipment, skid steers, and generators all run on it. Pines USA produces an off-road biodiesel as an alternative for those non-road applications.
           </p>
           <p class="body-text" style="margin-top:16px;">
-            Our product is derived from waste cooking oil collected from restaurants in the Lindale and Van areas, then processed at our Athens, Texas facility. This is a domestically sourced, regionally produced fuel, not an imported product.
+            The product is derived from used cooking oil recovered by Pines Green from restaurants and food service operations, then processed at the group's Athens, Texas facility. Feedstock, production, and delivery all stay under the group's control.
           </p>
           <p class="body-text" style="margin-top:16px;">
-            Off-road biodiesel is not subject to the same on-highway tax structure as pump diesel, making it a cost-relevant consideration for large-volume agricultural users. Contact us to discuss current pricing and availability.
+            Off-road fuel is not subject to the same on-highway tax structure as pump diesel, which matters for high-volume users. Contact us to discuss current pricing and availability. If you also need conventional diesel, gasoline, or DEF, Pines Fuel Brokerage can quote those alongside it.
           </p>
-          <a href="../index.html#contact" style="margin-top:36px; display:inline-block;" class="btn btn-primary">Inquire About Purchase</a>
+          <a href="contact.html#biodiesel" style="margin-top:36px; display:inline-block;" class="btn btn-primary">Inquire About Purchase</a>
         </div>
         <div class="col-img">
           <div class="col-img-placeholder">
             <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="8" y="32" width="50" height="30" rx="2" stroke="#a8c5a8" stroke-width="2"/>
-              <circle cx="20" cy="62" r="8" stroke="#d4ab10" stroke-width="1.5"/>
-              <circle cx="46" cy="62" r="8" stroke="#d4ab10" stroke-width="1.5"/>
-              <path d="M58 44h8a2 2 0 012 2v8a2 2 0 01-2 2h-8" stroke="#a8c5a8" stroke-width="1.5"/>
-              <path d="M8 44H4a2 2 0 00-2 2v4a2 2 0 002 2h4" stroke="#a8c5a8" stroke-width="1.5"/>
-              <path d="M20 32V20a2 2 0 012-2h16a2 2 0 012 2v12" stroke="#a8c5a8" stroke-width="1.5"/>
+              <rect x="8" y="32" width="50" height="30" rx="2" stroke="#90b4d8" stroke-width="2"/>
+              <circle cx="20" cy="62" r="8" stroke="#3a6fba" stroke-width="1.5"/>
+              <circle cx="46" cy="62" r="8" stroke="#3a6fba" stroke-width="1.5"/>
+              <path d="M58 44h8a2 2 0 012 2v8a2 2 0 01-2 2h-8" stroke="#90b4d8" stroke-width="1.5"/>
+              <path d="M8 44H4a2 2 0 00-2 2v4a2 2 0 002 2h4" stroke="#90b4d8" stroke-width="1.5"/>
+              <path d="M20 32V20a2 2 0 012-2h16a2 2 0 012 2v12" stroke="#90b4d8" stroke-width="1.5"/>
             </svg>
           </div>
         </div>
@@ -122,7 +217,7 @@
         <h2 class="section-title">What We Produce</h2>
         <div class="divider"></div>
         <p class="body-text" style="max-width:640px;">
-          Our off-road biodiesel is produced from used cooking oil feedstocks and processed through standard transesterification. The following provides a general product overview. Contact us for full specification documentation.
+          The product is produced from used cooking oil feedstock and processed through transesterification. The following is a general overview. Contact us for full specification and batch documentation.
         </p>
       </div>
       <div class="spec-grid">
@@ -137,14 +232,14 @@
           <p>This fuel is classified for off-road use only. It is appropriate for farm tractors, irrigation equipment, generators, skid steers, and other non-highway diesel machinery.</p>
         </div>
         <div class="spec-card fade-up">
-          <span class="spec-val">Local</span>
+          <span class="spec-val">Recovered</span>
           <h4>Feedstock Origin</h4>
-          <p>All feedstock oil is collected from East Texas restaurants in the Lindale and Van areas. The entire supply chain from collection to production occurs within our region.</p>
+          <p>Feedstock is used cooking oil recovered by Pines Green from restaurants, commercial kitchens, schools, and food service operations. Collection and production sit under the same group.</p>
         </div>
         <div class="spec-card fade-up">
           <span class="spec-val">Athens, TX</span>
           <h4>Processing Location</h4>
-          <p>Production takes place at our dedicated processing facility in Athens, Texas. All processing is done in-house under our direct operational control.</p>
+          <p>Production takes place at the group's processing facility in Athens, Texas. All processing is done in house under direct operational control.</p>
         </div>
         <div class="spec-card fade-up">
           <span class="spec-val">Flexible</span>
@@ -152,9 +247,9 @@
           <p>We work with buyers to determine appropriate delivery volume and frequency based on the size of their operation. Contact us to discuss your specific requirements.</p>
         </div>
         <div class="spec-card fade-up">
-          <span class="spec-val">East TX</span>
+          <span class="spec-val">Regional</span>
           <h4>Distribution Area</h4>
-          <p>We currently serve buyers in East Texas. Reach out to confirm service availability for your specific location and to discuss logistics for your operation.</p>
+          <p>Deliveries run from the Athens facility across the surrounding region. Reach out to confirm availability for your location and to discuss logistics for your operation.</p>
         </div>
       </div>
     </div>
@@ -165,16 +260,16 @@
     <div class="container">
       <div class="two-col reverse">
         <div class="col-img">
-          <div class="col-img-placeholder light">
-            <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M40 10C40 10 20 28 20 46a20 20 0 0040 0C60 28 40 10 40 10z" stroke="#5a8c5a" stroke-width="2"/>
-              <path d="M40 30v20M30 40h20" stroke="#2d4a2d" stroke-width="2" stroke-linecap="round"/>
+          <div class="col-img-placeholder">
+            <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Fuel drop illustration">
+              <path d="M40 10C40 10 20 28 20 46a20 20 0 0040 0C60 28 40 10 40 10z" stroke="#90b4d8" stroke-width="2"/>
+              <path d="M40 30v20M30 40h20" stroke="#3a6fba" stroke-width="2" stroke-linecap="round"/>
             </svg>
           </div>
         </div>
         <div>
           <span class="section-label">Why Biodiesel</span>
-          <h2 class="section-title">Considerations for<br>Agricultural Operations</h2>
+          <h2 class="section-title">Considerations for<br>Commercial Buyers</h2>
           <div class="divider"></div>
           <ul class="benefit-list">
             <li>
@@ -183,7 +278,7 @@
                   <polyline points="2,6 5,9 10,3"/>
                 </svg>
               </div>
-              <div><strong style="color:#1a2e1a;">Domestically Produced</strong><br>Biodiesel made from domestic feedstocks reduces dependence on imported petroleum. All of our feedstock and production is American.</div>
+              <div><strong style="color:var(--forest);">Domestically Produced</strong><br>Feedstock is recovered and processed in the United States. There is no imported product in the supply chain.</div>
             </li>
             <li>
               <div class="check">
@@ -191,7 +286,7 @@
                   <polyline points="2,6 5,9 10,3"/>
                 </svg>
               </div>
-              <div><strong style="color:#1a2e1a;">Off-Road Tax Considerations</strong><br>Off-road fuel is subject to different tax treatment than highway diesel. For high-volume farm operations, this is a factor worth evaluating with your accountant.</div>
+              <div><strong style="color:var(--forest);">Off-Road Tax Considerations</strong><br>Off-road fuel is subject to different tax treatment than highway diesel. For high-volume farm operations, this is a factor worth evaluating with your accountant.</div>
             </li>
             <li>
               <div class="check">
@@ -199,7 +294,7 @@
                   <polyline points="2,6 5,9 10,3"/>
                 </svg>
               </div>
-              <div><strong style="color:#1a2e1a;">High Lubricity</strong><br>Biodiesel is well known for its superior lubricity properties compared to ultra-low-sulfur petroleum diesel, which can benefit injection pump and fuel system components in older equipment.</div>
+              <div><strong style="color:var(--forest);">High Lubricity</strong><br>Biodiesel is well known for its superior lubricity properties compared to ultra-low-sulfur petroleum diesel, which can benefit injection pump and fuel system components in older equipment.</div>
             </li>
             <li>
               <div class="check">
@@ -207,7 +302,7 @@
                   <polyline points="2,6 5,9 10,3"/>
                 </svg>
               </div>
-              <div><strong style="color:#1a2e1a;">Locally Sourced Supply Chain</strong><br>Purchasing from Pines Oil Company means your fuel dollar stays in East Texas. The feedstock came from local restaurants and the processing jobs are local jobs.</div>
+              <div><strong style="color:var(--forest);">Controlled Supply Chain</strong><br>The group collects the feedstock, processes it, and delivers the finished product. Fewer parties in the chain means fewer places for a delivery to fall apart.</div>
             </li>
           </ul>
         </div>
@@ -225,28 +320,36 @@
       </div>
       <div style="max-width:740px;">
         <div class="faq-item">
-          <div class="faq-q">Can I use biodiesel in my existing diesel equipment?</div>
-          <div class="faq-a">Many diesel engines, particularly those manufactured before 2007, can run on biodiesel blends with little or no modification. Equipment manufactured more recently may have compatibility considerations. We recommend consulting your equipment manufacturer documentation and contacting us to discuss your specific situation before purchasing.</div>
+          <button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-a1">Can I use biodiesel in my existing diesel equipment?</button>
+          <div class="faq-a" id="faq-a1">Many diesel engines, particularly those manufactured before 2007, can run on biodiesel blends with little or no modification. Equipment manufactured more recently may have compatibility considerations. Check your equipment manufacturer documentation and contact us to discuss your specific situation before purchasing.</div>
         </div>
         <div class="faq-item">
-          <div class="faq-q">What is the difference between B100 and blended biodiesel?</div>
-          <div class="faq-a">B100 is pure biodiesel with no petroleum diesel blended in. A B20 blend, for example, would be 20 percent biodiesel and 80 percent petroleum diesel. Different blends perform differently in varying temperatures and equipment types. We can discuss what may be appropriate for your operation.</div>
+          <button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-a2">What is the difference between B100 and blended biodiesel?</button>
+          <div class="faq-a" id="faq-a2">B100 is pure biodiesel with no petroleum diesel blended in. A B20 blend is 20 percent biodiesel and 80 percent petroleum diesel. Different blends perform differently across temperatures and equipment types. We will recommend a ratio for your operation.</div>
         </div>
         <div class="faq-item">
-          <div class="faq-q">How does cold weather affect biodiesel performance?</div>
-          <div class="faq-a">Biodiesel has a higher cloud point than petroleum diesel, meaning it can begin to gel at lower temperatures. In East Texas winters, this is generally manageable, particularly with blended products. Proper storage and blending practices address most cold-weather concerns. Contact us for guidance specific to your situation.</div>
+          <button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-a3">How does cold weather affect biodiesel performance?</button>
+          <div class="faq-a" id="faq-a3">Biodiesel has a higher cloud point than petroleum diesel, meaning it can begin to gel at lower temperatures. In Texas winters this is generally manageable, particularly with blended product. Storage location and blend ratio address most cold weather concerns. Ask us before the season changes rather than after.</div>
         </div>
         <div class="faq-item">
-          <div class="faq-q">What is the minimum purchase quantity?</div>
-          <div class="faq-a">We work with buyers of varying sizes. Contact us directly to discuss current availability and to determine what purchase arrangements make sense for your operation. We are happy to talk through logistics before you commit to anything.</div>
+          <button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-a4">What is the minimum purchase quantity?</button>
+          <div class="faq-a" id="faq-a4">We work with buyers of varying sizes. Contact us to discuss current availability and what purchase arrangement makes sense for your operation. We will talk through logistics before you commit to anything.</div>
         </div>
         <div class="faq-item">
-          <div class="faq-q">How does Pines Oil Company price its biodiesel?</div>
-          <div class="faq-a">Pricing is based on current feedstock costs, production volume, and market conditions. We do not publish a fixed price list as these factors change over time. Reach out for a current quote and to discuss volume-based pricing for larger agricultural operations.</div>
+          <button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-a5">How is the biodiesel priced?</button>
+          <div class="faq-a" id="faq-a5">Pricing reflects current feedstock costs, production volume, and market conditions. We do not publish a fixed price list because those factors move. Reach out for a current quote and to discuss volume pricing for larger operations.</div>
         </div>
         <div class="faq-item">
-          <div class="faq-q">Do you deliver, or do buyers pick up at the Athens facility?</div>
-          <div class="faq-a">We are able to discuss both delivery and facility pickup options depending on your location and volume. Contact us to determine what works best for your operation.</div>
+          <button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-a6">Do you deliver, or do buyers pick up at the Athens facility?</button>
+          <div class="faq-a" id="faq-a6">Both are available depending on your location and volume. Contact us to determine what works best for your operation.</div>
+        </div>
+        <div class="faq-item">
+          <button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-a7">Can I buy conventional diesel or gasoline from the group as well?</button>
+          <div class="faq-a" id="faq-a7">Yes. Pines Fuel Brokerage sources bulk diesel, gasoline, DEF, and on site fueling through its supplier network. A single conversation can cover both the biodiesel and the conventional product you need. See the <a href="fuel-brokerage.html">Fuel Brokerage division</a> for details.</div>
+        </div>
+        <div class="faq-item">
+          <button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-a8">Can I supply used cooking oil instead of buying fuel?</button>
+          <div class="faq-a" id="faq-a8">Pines Green collects used cooking oil from restaurants, commercial kitchens, schools, and food service operations at no charge, and supplies the containers. See <a href="pines-green.html">Pines Green</a> to schedule collection.</div>
         </div>
       </div>
     </div>
@@ -258,16 +361,19 @@
     <div class="container">
       <div class="cta-inner">
         <span class="section-label">Get a Quote</span>
-        <h2 class="section-title light">Interested in Our Biodiesel?</h2>
+        <h2 class="section-title light">Discuss Pricing and Availability</h2>
         <div class="divider center"></div>
-        <p class="body-text light">Contact us to discuss pricing, availability, and delivery options for your East Texas farm or ranching operation.</p>
+        <p class="body-text light">Send your equipment type, expected volume, delivery location, and storage setup. We will come back with a blend recommendation and a current price.</p>
         <div class="cta-actions">
           <a href="tel:+15126409102" class="btn btn-primary">(512) 640-9102</a>
-          <a href="../index.html#contact" class="btn btn-outline">Submit an Inquiry</a>
+          <a href="contact.html#biodiesel" class="btn btn-outline">Submit an Inquiry</a>
+          <a href="pines-usa.html" class="btn btn-outline">Pines USA Division</a>
         </div>
       </div>
     </div>
   </section>
+
+  </main>
 
   <!-- FOOTER -->
   <footer>
@@ -275,30 +381,42 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="../index.html" class="wordmark">
-            <span class="wordmark-top">Pines Oil Company</span>
+            <span class="wordmark-top">Pines Energy Group</span>
             <span class="wordmark-sub">Athens, Texas</span>
           </a>
-          <p class="footer-desc">East Texas biodiesel production. We collect waste cooking oil from local restaurants and process it into high-performance off-road biodiesel for farms and ranches across our region.</p>
+          <p class="footer-desc">A privately held energy company operating in commercial fuel brokerage, oil and gas, biodiesel production, used cooking oil recovery, and long-term industrial holdings.</p>
+          <p class="footer-legal">Pines Energy Group LLC<br>Athens, Texas, United States</p>
         </div>
         <div class="footer-col">
-          <h5>Company</h5>
+          <h5>Quick Links</h5>
           <ul>
             <li><a href="../index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="../index.html#contact">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="pines-usa.html">Pines USA Division</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h5>Services</h5>
+          <h5>Operating Divisions</h5>
           <ul>
-            <li><a href="restaurants.html">Restaurant Pickup Program</a></li>
-            <li><a href="farmers.html">Biodiesel for Buyers</a></li>
-            <li><a href="../index.html#contact">Investor Relations</a></li>
+            <li><a href="fuel-brokerage.html" class="acc-brokerage"><span class="fdot" aria-hidden="true"></span>Pines Fuel Brokerage</a></li>
+            <li><a href="pines-usa.html" class="acc-usa"><span class="fdot" aria-hidden="true"></span>Pines USA</a></li>
+            <li><a href="pines-green.html" class="acc-green"><span class="fdot" aria-hidden="true"></span>Pines Green</a></li>
+            <li><a href="holdings.html" class="acc-holdings"><span class="fdot" aria-hidden="true"></span>Pines Holdings</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Contact</h5>
+          <ul class="footer-contact">
+            <li><a href="tel:+15126409102">(512) 640-9102</a></li>
+            <li><a href="mailto:pinesenergy@mesquitedata.com">pinesenergy@mesquitedata.com</a></li>
+            <li>Headquarters<br>Athens, Texas</li>
+            <li>Monday to Friday<br>7:00 AM to 5:00 PM Central</li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <span>&copy; 2026 Pines Oil Company. All rights reserved. Athens, Texas.</span>
+        <span>&copy; 2026 Pines Energy Group LLC. All rights reserved.</span>
         <span>
           <a href="tel:+15126409102">(512) 640-9102</a>
           &nbsp;&nbsp;|&nbsp;&nbsp;
@@ -314,7 +432,8 @@
     document.querySelectorAll('.faq-q').forEach(q => {
       q.addEventListener('click', () => {
         const item = q.closest('.faq-item');
-        item.classList.toggle('open');
+        const open = item.classList.toggle('open');
+        q.setAttribute('aria-expanded', String(open));
       });
     });
   </script>

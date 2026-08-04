@@ -14,27 +14,58 @@ if (navbar) {
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('nav-links');
 if (hamburger && navLinks) {
+  const setMenu = (open) => {
+    navLinks.classList.toggle('open', open);
+    hamburger.setAttribute('aria-expanded', String(open));
+    hamburger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  };
+  setMenu(false);
+
   hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('open');
+    setMenu(!navLinks.classList.contains('open'));
   });
   // Close on link click
   navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => navLinks.classList.remove('open'));
+    link.addEventListener('click', () => setMenu(false));
+  });
+  // Close on Escape so keyboard users are not trapped in the panel
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && navLinks.classList.contains('open')) {
+      setMenu(false);
+      hamburger.focus();
+    }
   });
 }
 
-// Contact form handler (static site — mailto fallback + UX)
+// Contact form handler (static site, mailto fallback + UX)
+const CONTACT_EMAIL = 'pinesenergy@mesquitedata.com';
 const contactForm = document.getElementById('contact-form');
 if (contactForm) {
   contactForm.addEventListener('submit', function (e) {
     e.preventDefault();
-    const name    = this.querySelector('[name="name"]').value.trim();
-    const email   = this.querySelector('[name="email"]').value.trim();
-    const subject = this.querySelector('[name="subject"]').value;
-    const message = this.querySelector('[name="message"]').value.trim();
+    const value = (sel) => {
+      const el = this.querySelector(sel);
+      return el ? el.value.trim() : '';
+    };
+    const name    = value('[name="name"]');
+    const email   = value('[name="email"]');
+    const company = value('[name="company"]');
+    const phone   = value('[name="phone"]');
+    const subject = value('[name="subject"]');
+    const message = value('[name="message"]');
 
-    const body = `Name: ${name}%0AEmail: ${email}%0A%0A${message}`;
-    const mailto = `mailto:info@pinesoil.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+    const lines = [
+      `Name: ${name}`,
+      `Company: ${company}`,
+      `Email: ${email}`,
+      `Phone: ${phone}`,
+      `Division: ${subject}`,
+      '',
+      message
+    ];
+    const mailto = 'mailto:' + CONTACT_EMAIL
+      + '?subject=' + encodeURIComponent(subject || 'Website inquiry')
+      + '&body=' + encodeURIComponent(lines.join('\n'));
     window.location.href = mailto;
 
     const success = document.getElementById('form-success');

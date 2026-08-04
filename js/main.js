@@ -38,7 +38,7 @@ if (hamburger && navLinks) {
 }
 
 // Contact form handler (static site, mailto fallback + UX)
-const CONTACT_EMAIL = 'pinesenergy@mesquitedata.com';
+const CONTACT_EMAIL = 'brant@pinesoil.com';
 const contactForm = document.getElementById('contact-form');
 if (contactForm) {
   contactForm.addEventListener('submit', function (e) {

@@ -115,7 +115,7 @@ fields pre-filled (`mailto:`), which requires no server. The destination address
 is set once, in `js/main.js`:
 
 ```js
-const CONTACT_EMAIL = 'pinesenergy@mesquitedata.com';
+const CONTACT_EMAIL = 'brant@pinesoil.com';
 ```
 
 For true server-side form submission, consider Formspree, Netlify Forms, or
@@ -126,7 +126,7 @@ EmailJS. All three have free tiers and work with a static site.
 Current contact information embedded across the site:
 
 - Phone: (512) 640-9102
-- Email: pinesenergy@mesquitedata.com
+- Email: brant@pinesoil.com
 - Headquarters: Athens, Texas
 
 To change these, find and replace across all `.html` files, and update

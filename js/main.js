@@ -1,104 +1,100 @@
-// Navbar scroll behavior
-const navbar = document.getElementById('navbar');
-if (navbar) {
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 40) {
-      navbar.classList.add('scrolled');
-    } else {
-      navbar.classList.remove('scrolled');
-    }
-  });
-}
+'use strict';
 
-// Mobile menu
-const hamburger = document.getElementById('hamburger');
-const navLinks = document.getElementById('nav-links');
-if (hamburger && navLinks) {
-  const setMenu = (open) => {
-    navLinks.classList.toggle('open', open);
-    hamburger.setAttribute('aria-expanded', String(open));
-    hamburger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+// No cookies, tracking identifiers, or browser storage are used by this script.
+document.documentElement.classList.add('js');
+const toggle = document.querySelector('.menu-toggle');
+const nav = document.getElementById('nav-links');
+if (toggle && nav) {
+  const setMenu = open => {
+    nav.classList.toggle('open', open);
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
   };
-  setMenu(false);
-
-  hamburger.addEventListener('click', () => {
-    setMenu(!navLinks.classList.contains('open'));
-  });
-  // Close on link click
-  navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => setMenu(false));
-  });
-  // Close on Escape so keyboard users are not trapped in the panel
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && navLinks.classList.contains('open')) {
+  toggle.addEventListener('click', () => setMenu(toggle.getAttribute('aria-expanded') !== 'true'));
+  nav.addEventListener('click', event => { if (event.target.closest('a')) setMenu(false); });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') {
       setMenu(false);
-      hamburger.focus();
+      toggle.focus();
+    }
+  });
+  document.addEventListener('click', event => {
+    if (!event.target.closest('.nav-wrap')) setMenu(false);
+  });
+  const desktop = window.matchMedia('(min-width: 961px)');
+  desktop.addEventListener('change', () => setMenu(false));
+}
+
+const form = document.getElementById('contact-form');
+if (form) {
+  const service = form.elements.namedItem('service');
+  const requested = new URLSearchParams(window.location.search).get('service');
+  if ([...service.options].some(option => option.value === requested)) service.value = requested;
+  const submit = form.querySelector('button[type="submit"]');
+  const status = document.getElementById('form-status');
+  const fallback = document.getElementById('email-fallback');
+  const originalLabel = submit.innerHTML;
+  submit.disabled = false;
+  let sending = false;
+  const showStatus = message => {
+    status.textContent = message;
+    status.hidden = false;
+  };
+  const makeEmail = () => {
+    const data = new FormData(form);
+    const subject = service.selectedOptions[0].textContent;
+    const body = ['Name: ' + String(data.get('name') || '').trim(),
+      'Company: ' + String(data.get('company') || '').trim(),
+      'Email: ' + String(data.get('email') || '').trim(),
+      'Phone: ' + String(data.get('phone') || '').trim(),
+      'Inquiry: ' + subject].join('\r\n');
+    return 'mailto:' + form.dataset.email + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+  };
+  form.addEventListener('submit', async event => {
+    event.preventDefault();
+    if (sending || !form.reportValidity()) return;
+    fallback.href = makeEmail();
+    fallback.hidden = true;
+    if (form.dataset.delivery !== 'formbold') {
+      // A mailto link cannot tell us whether a message was sent. Keep all fields.
+      showStatus('Your email is ready. Open the prepared email below, then send it from your email app. Nothing has been sent yet.');
+      fallback.hidden = false;
+      fallback.focus();
+      return;
+    }
+    sending = true;
+    submit.disabled = true;
+    form.setAttribute('aria-busy', 'true');
+    submit.textContent = 'Sending…';
+    showStatus('Sending your inquiry…');
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 20000);
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST', body: JSON.stringify(Object.fromEntries(new FormData(form))),
+        headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
+        credentials: 'omit', signal: controller.signal,
+      });
+      if (!response.ok || response.redirected) throw new Error('Submission rejected');
+      // Formbold's official client uses a successful HTTP response as acknowledgement.
+      // Also honor an explicit provider error if the response includes JSON.
+      if ((response.headers.get('content-type') || '').includes('application/json')) {
+        const result = await response.json();
+        if (result?.success === false || result?.error || result?.status === 'error') {
+          throw new Error('Submission not confirmed');
+        }
+      }
+      showStatus('Thank you. Your inquiry was received. Our team will contact you using the details you provided.');
+      form.reset();
+    } catch {
+      showStatus('We could not confirm delivery. Your details are still here. You can try again, open the prepared email below, or call us. If delivery was interrupted, the original inquiry may still have arrived.');
+      fallback.hidden = false;
+    } finally {
+      clearTimeout(timeout);
+      sending = false;
+      submit.disabled = false;
+      form.removeAttribute('aria-busy');
+      submit.innerHTML = originalLabel;
     }
   });
 }
-
-// Contact form handler (static site, mailto fallback + UX)
-const CONTACT_EMAIL = 'brant@pinesoil.com';
-const contactForm = document.getElementById('contact-form');
-if (contactForm) {
-  contactForm.addEventListener('submit', function (e) {
-    e.preventDefault();
-    const value = (sel) => {
-      const el = this.querySelector(sel);
-      return el ? el.value.trim() : '';
-    };
-    const name    = value('[name="name"]');
-    const email   = value('[name="email"]');
-    const company = value('[name="company"]');
-    const phone   = value('[name="phone"]');
-    const subject = value('[name="subject"]');
-    const message = value('[name="message"]');
-
-    const lines = [
-      `Name: ${name}`,
-      `Company: ${company}`,
-      `Email: ${email}`,
-      `Phone: ${phone}`,
-      `Division: ${subject}`,
-      '',
-      message
-    ];
-    const mailto = 'mailto:' + CONTACT_EMAIL
-      + '?subject=' + encodeURIComponent(subject || 'Website inquiry')
-      + '&body=' + encodeURIComponent(lines.join('\n'));
-    window.location.href = mailto;
-
-    const success = document.getElementById('form-success');
-    if (success) {
-      success.style.display = 'block';
-    }
-    this.reset();
-    setTimeout(() => { if (success) success.style.display = 'none'; }, 6000);
-  });
-}
-
-// Smooth scroll for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      e.preventDefault();
-      const offset = 82;
-      const top = target.getBoundingClientRect().top + window.scrollY - offset;
-      window.scrollTo({ top, behavior: 'smooth' });
-    }
-  });
-});
-
-// Animate elements on scroll
-const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -40px 0px' };
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      observer.unobserve(entry.target);
-    }
-  });
-}, observerOptions);
-
-document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));

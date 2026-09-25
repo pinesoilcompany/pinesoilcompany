@@ -31,7 +31,7 @@ if (navToggle && siteNav) {
   });
 
   // Reset when resizing back up to the desktop layout.
-  window.matchMedia('(min-width: 901px)').addEventListener('change', (e) => {
+  window.matchMedia('(min-width: 861px)').addEventListener('change', (e) => {
     if (e.matches) setOpen(false);
   });
 }
@@ -77,7 +77,7 @@ if (form) {
       if (!response.ok) throw new Error(`FormBold responded ${response.status}`);
 
       form.reset();
-      showStatus('Thank you. Your message has been sent and we will respond during business hours, 5:00 AM to 10:00 PM Central.');
+      showStatus('Thank you. Your message has been sent and we will respond during office hours, 5:00 AM to 10:00 PM Central, every day.');
     } catch (err) {
       showStatus('Your message could not be sent. Please try again, or call (512) 640-9102 or email brant@pinesoil.com.', true);
     } finally {

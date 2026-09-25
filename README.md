@@ -72,9 +72,9 @@ To change one of these, find and replace it across all `.html` files. The phone 
 
 All colors are set as variables at the top of `css/style.css`:
 
-- `--navy` and related shades: header, dark sections, footer
-- `--accent`: the main accent (red by default)
-- `--accent-on-dark`: a lighter version of the accent, used only for small text on navy so it stays readable
+- `--navy` and related shades: page banners, the contact strip, and the footer
+- `--accent`: the main accent (red by default), used for buttons, the header's top bar, and highlights
+- `--accent-light`: a lighter version of the accent, used only for small text on navy so it stays readable
 
 Division pages switch the accent by adding a class to `<body>`:
 
@@ -84,11 +84,27 @@ Division pages switch the accent by adding a class to `<body>`:
 
 To adjust a theme, edit its `body.theme-*` block near the top of the stylesheet.
 
-**Fonts:** headings use Playfair Display at weight 600 (the same style as before, but less heavy than the old 900 weight). Body text uses Source Sans 3. Both load from Google Fonts at the top of `css/style.css`.
+**Fonts:** headings, navigation, and buttons use Jost, a clean geometric sans-serif in the style of Futura. Body text uses Source Sans 3. Both load from Google Fonts at the top of `css/style.css`.
+
+## Adding Photos
+
+The site is built without photos for now, but the page banners are ready for them. Real photos of the facility, trucks, tanks, and the Recovery Point will make the biggest visual difference.
+
+To put a photo behind a banner, add a `style` attribute to that page's banner section:
+
+```html
+<!-- Home page (index.html) -->
+<section class="hero" style="--hero-img: url('images/hero-home.jpg')">
+
+<!-- Any page in pages/ (note the ../) -->
+<section class="page-hero" style="--hero-img: url('../images/hero-recovery-point.jpg')">
+```
+
+A dark navy overlay is applied automatically so the white text stays readable. Use landscape photos at least 1920px wide, saved as JPG at around 200 to 400 KB. Put them in the `images/` folder.
 
 ## Adding the Logo
 
-The header uses the text wordmark "Pines Energy Group / Athens, Texas". It does not need a logo image, and none is placeholdered there.
+The header uses the text wordmark "PINES ENERGY GROUP". It does not need a logo image, and there is no placeholder for one.
 
 **The favicon files are placeholders** (a white "P" on navy). When the logo is ready:
 
@@ -199,6 +215,5 @@ These pages were removed in this rework: `fuel-brokerage.html`, `holdings.html`,
 - A "skip to main content" link, one `<h1>` per page, and labeled navigation and breadcrumbs
 - The mobile menu reports its open/closed state to screen readers and closes with Escape
 - FAQs use native `<details>` elements, so they work with a keyboard and without JavaScript
-- Tables turn into labeled rows on phones instead of scrolling sideways
 - Visible focus outlines on all links, buttons, and form fields
 - No motion effects, and transitions are turned off for visitors who prefer reduced motion

@@ -49,17 +49,13 @@
 
   <header class="site-header">
     <div class="container header-inner">
-      <a href="../index.html" class="wordmark" aria-label="Pines Energy Group, home">
-        <span class="wordmark-name">Pines Energy Group</span>
-        <span class="wordmark-sub">Athens, Texas</span>
-      </a>
+      <a href="../index.html" class="wordmark">Pines Energy Group</a>
       <button class="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Open menu">
         <span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span>
       </button>
       <nav class="site-nav" id="site-nav" aria-label="Main">
         <ul class="nav-list">
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
+          <li><a href="about.html">About Us</a></li>
           <li><a href="pines-usa.html">Pines USA</a></li>
           <li><a href="pines-solutions.html">Pines Solutions</a></li>
           <li><a href="recovery-point.html">Recovery Point</a></li>
@@ -71,7 +67,6 @@
 
   <main id="main">
 
-    <!-- PAGE HERO -->
     <section class="page-hero">
       <div class="container">
         <nav class="breadcrumb" aria-label="Breadcrumb">
@@ -80,82 +75,62 @@
             <li><span aria-current="page">Contact</span></li>
           </ol>
         </nav>
-        <span class="eyebrow">Contact</span>
-        <h1>Contact Pines Energy Group</h1>
-        <p class="lead">One phone number, one email address, and one form reach both of our companies. Tell us what you need and we will route it to the right team.</p>
+        <h1>Contact Us</h1>
+        <p class="lead">One call or message reaches Pines USA and Pines Solutions.</p>
       </div>
     </section>
 
     <section class="section">
       <div class="container contact-grid">
+        <ul class="facts">
+          <li><b>Phone</b><a href="tel:+15126409102">(512) 640-9102</a></li>
+          <li><b>Email</b><a href="mailto:brant@pinesoil.com">brant@pinesoil.com</a></li>
+          <li><b>Address</b><address>3855 TX-31<br>Athens, TX 75752</address></li>
+          <li><b>Hours</b><span>Daily, 5:00 AM to 10:00 PM Central</span></li>
+        </ul>
 
-        <!-- DETAILS -->
-        <div>
-          <h2>Contact Details</h2>
-          <dl class="details">
-            <div><dt>Phone</dt><dd><a href="tel:+15126409102">(512) 640-9102</a></dd></div>
-            <div><dt>Email</dt><dd><a href="mailto:brant@pinesoil.com">brant@pinesoil.com</a></dd></div>
-            <div><dt>Address</dt><dd><address>Pines Energy Group LLC<br>3855 TX-31<br>Athens, TX 75752</address></dd></div>
-            <div><dt>Office Hours</dt><dd>5:00 AM to 10:00 PM Central, daily</dd></div>
-            <div><dt>Recovery Point</dt><dd>Open 24 hours to registered partners</dd></div>
-          </dl>
-
-          <h3 class="mt-lg">Which Company Do I Need?</h3>
-          <ul class="check-list">
-            <li><strong>Pines USA</strong> handles biodiesel purchases, blend recommendations, pricing, and batch documentation.</li>
-            <li><strong>Pines Solutions</strong> handles scheduled oil collection, container service, and Recovery Point registration.</li>
-            <li>Not sure? Choose <strong>General inquiry</strong> and we will route your message.</li>
-          </ul>
-        </div>
-
-        <!-- FORM -->
-        <div>
+        <form id="contact-form" class="form" action="https://formbold.com/s/oWrDm" method="POST">
           <h2>Send a Message</h2>
-          <p class="muted form-intro">Fields marked optional can be left blank. We respond during office hours.</p>
-
-          <form id="contact-form" class="form" action="https://formbold.com/s/oWrDm" method="POST">
-            <div class="form-row">
-              <div class="field">
-                <label for="f-name">Full name</label>
-                <input id="f-name" name="name" type="text" autocomplete="name" required>
-              </div>
-              <div class="field">
-                <label for="f-company">Company <span class="optional">(optional)</span></label>
-                <input id="f-company" name="company" type="text" autocomplete="organization">
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="field">
-                <label for="f-email">Email address</label>
-                <input id="f-email" name="email" type="email" autocomplete="email" required>
-              </div>
-              <div class="field">
-                <label for="f-phone">Phone <span class="optional">(optional)</span></label>
-                <input id="f-phone" name="phone" type="tel" autocomplete="tel">
-              </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="f-name">Full name</label>
+              <input id="f-name" name="name" type="text" autocomplete="name" required>
             </div>
             <div class="field">
-              <label for="f-topic">What can we help with?</label>
-              <select id="f-topic" name="topic" required>
-                <option value="" disabled selected>Select a topic</option>
-                <option data-topic="pines-usa" value="Pines USA: Biodiesel purchase or pricing">Pines USA: Biodiesel purchase or pricing</option>
-                <option data-topic="collection" value="Pines Solutions: Scheduled oil collection">Pines Solutions: Scheduled oil collection</option>
-                <option data-topic="recovery-point" value="Pines Solutions: Recovery Point registration">Pines Solutions: Recovery Point registration</option>
-                <option data-topic="general" value="General inquiry">General inquiry</option>
-              </select>
+              <label for="f-company">Company <span class="optional">(optional)</span></label>
+              <input id="f-company" name="company" type="text" autocomplete="organization">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="f-email">Email</label>
+              <input id="f-email" name="email" type="email" autocomplete="email" required>
             </div>
             <div class="field">
-              <label for="f-message">Message</label>
-              <textarea id="f-message" name="message" required placeholder="For collection, include your address and approximate weekly oil volume. For fuel, include the blend, volume, and delivery location."></textarea>
+              <label for="f-phone">Phone <span class="optional">(optional)</span></label>
+              <input id="f-phone" name="phone" type="tel" autocomplete="tel">
             </div>
-            <p class="form-legal">Please do not include payment details or other sensitive information. By sending this form you agree that we may use the information you provide to respond to your inquiry, as described in our <a href="privacy.html">Privacy Policy</a>.</p>
-            <div>
-              <button type="submit" class="btn btn-primary">Send Message</button>
-            </div>
-            <div id="form-status" class="form-status" role="status" tabindex="-1" hidden></div>
-          </form>
-        </div>
-
+          </div>
+          <div class="field">
+            <label for="f-topic">Topic</label>
+            <select id="f-topic" name="topic" required>
+              <option value="" disabled selected>Select a topic</option>
+              <option data-topic="pines-usa" value="Pines USA: Biodiesel quote">Pines USA: Biodiesel quote</option>
+              <option data-topic="collection" value="Pines Solutions: Scheduled collection">Pines Solutions: Scheduled collection</option>
+              <option data-topic="recovery-point" value="Pines Solutions: Recovery Point registration">Pines Solutions: Recovery Point registration</option>
+              <option data-topic="general" value="General inquiry">General inquiry</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-message">Message</label>
+            <textarea id="f-message" name="message" required></textarea>
+          </div>
+          <p class="form-legal">See our <a href="privacy.html">Privacy Policy</a> for how we use this information.</p>
+          <div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </div>
+          <div id="form-status" class="form-status" role="status" tabindex="-1" hidden></div>
+        </form>
       </div>
     </section>
 
@@ -165,24 +140,18 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="../index.html" class="wordmark">
-            <span class="wordmark-name">Pines Energy Group</span>
-            <span class="wordmark-sub">Athens, Texas</span>
-          </a>
-          <p>Parent company of Pines USA and Pines Solutions. Waste cooking oil recovery and biodiesel production in Athens, Texas.</p>
+          <a href="../index.html" class="wordmark">Pines Energy Group</a>
+          <p>Waste cooking oil recovery and biodiesel production in Athens, Texas.</p>
         </div>
         <div>
           <h2>Company</h2>
           <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
+            <li><a href="about.html">About Us</a></li>
             <li><a href="contact.html">Contact</a></li>
-            <li><a href="privacy.html">Privacy Policy</a></li>
-            <li><a href="terms.html">Terms of Service</a></li>
           </ul>
         </div>
         <div>
-          <h2>Our Companies</h2>
+          <h2>Businesses</h2>
           <ul>
             <li><a href="pines-usa.html">Pines USA</a></li>
             <li><a href="pines-solutions.html">Pines Solutions</a></li>
@@ -192,16 +161,15 @@
         <div>
           <h2>Contact</h2>
           <ul>
-            <li><address>3855 TX-31<br>Athens, TX 75752</address></li>
+            <li><address>3855 TX-31, Athens, TX 75752</address></li>
             <li><a href="tel:+15126409102">(512) 640-9102</a></li>
             <li><a href="mailto:brant@pinesoil.com">brant@pinesoil.com</a></li>
-            <li>Office: 5:00 AM to 10:00 PM Central, daily</li>
-            <li>Recovery Point: open 24 hours to registered partners</li>
+            <li>Daily, 5:00 AM to 10:00 PM CT</li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; <span data-year>2026</span> Pines Energy Group LLC, a Texas limited liability company. All rights reserved.</p>
+        <p>&copy; <span data-year>2026</span> Pines Energy Group LLC</p>
         <ul>
           <li><a href="privacy.html">Privacy Policy</a></li>
           <li><a href="terms.html">Terms of Service</a></li>

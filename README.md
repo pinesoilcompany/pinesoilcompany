@@ -40,8 +40,7 @@ The published HTML is generated and committed to the repository. Edit the source
 | `site.config.mjs` | Company contact information, hours, base URL, policy date, and Formbold endpoint |
 | `scripts/build.mjs` | Page content, shared header/footer, navigation, SEO, and structured data |
 | `scripts/legal.mjs` | Privacy Policy and Terms of Service text |
-| `css/site.css` | Shared responsive layout and functional components |
-| `css/original-style.css` | Restored original visual style: navy gradients, crimson accents, typography, division panels |
+| `css/site.css` | Complete responsive layout, original colors and typography, and shared components |
 | `css/fonts.css` | Locally hosted Playfair Display, Source Sans 3, and Bebas Neue fonts |
 | `js/main.js` | Mobile navigation and inquiry form behavior |
 | `images/favicon.svg` | Temporary browser-tab icon |
@@ -57,12 +56,12 @@ npm run check
 
 Building also updates `sitemap.xml`, `robots.txt`, the legacy redirects, and the 404 page. The build uses only Node's built-in modules. It does not regenerate the social image; browser QA does that from `scripts/social-cover.html`.
 
-The design follows the original website: deep navy gradients, crimson accents, blue-tinted light sections, uppercase navigation, prominent rectangular buttons, and the original Playfair Display, Source Sans 3, and Bebas Neue font families. Headings use lighter 600/700 weights instead of the original hero’s 900 weight. Fonts and licenses live in `images/fonts/` and are served locally without third-party font requests. Pines Solutions and Recovery Point use pine green accents. The two division panels have static accent borders; there are no floating elements, glow effects, scroll reveals, or moving tickers. The header uses the company name without a logo.
+The design follows the original website: deep navy gradients, crimson accents, blue-tinted light sections, uppercase navigation, prominent rectangular buttons, and the original Playfair Display, Source Sans 3, and Bebas Neue font families. Headings use a lighter 600 weight, natural wrapping, and a consistent size scale. Hero details stay in document flow, and layouts stack before columns become cramped. Fonts and licenses live in `images/fonts/` and are served locally without third-party font requests. Pines Solutions and Recovery Point use pine green accents. The two division panels have static accent borders; there are no floating elements, glow effects, scroll reveals, or moving tickers. The header uses the company name without a logo.
 
 ## Current operating details
 
 - Company: **Pines Energy Group LLC**, registered with the Texas Secretary of State.
-- Address: **3855 TX-31, Athens, TX 75752**.
+- Operations and Recovery Point: **3855 TX-31, Athens, TX 75752**.
 - Phone: **(512) 640-9102**.
 - Email: **brant@pinesoil.com**.
 - Company hours: **5:00 AM–10:00 PM Central**.

@@ -21,7 +21,7 @@ if (toggle && nav) {
   document.addEventListener('click', event => {
     if (!event.target.closest('.nav-wrap')) setMenu(false);
   });
-  const desktop = window.matchMedia('(min-width: 961px)');
+  const desktop = window.matchMedia('(min-width: 1101px)');
   desktop.addEventListener('change', () => setMenu(false));
 }
 

@@ -1,100 +1,93 @@
-'use strict';
+// Pines Energy Group LLC — shared site script
+// 1. Mobile navigation toggle
+// 2. Contact form: preselect topic from ?topic= and submit to FormBold
+// 3. Footer year
 
-// No cookies, tracking identifiers, or browser storage are used by this script.
-document.documentElement.classList.add('js');
-const toggle = document.querySelector('.menu-toggle');
-const nav = document.getElementById('nav-links');
-if (toggle && nav) {
-  const setMenu = open => {
-    nav.classList.toggle('open', open);
-    toggle.setAttribute('aria-expanded', String(open));
-    toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+// FormBold endpoint for the contact form. The same URL is also set as the
+// form's action attribute in pages/contact.html so the form still works
+// if JavaScript is disabled. Change both if the form is ever replaced.
+const FORM_ENDPOINT = 'https://formbold.com/s/oWrDm';
+
+// ---- 1. Mobile navigation ----
+const navToggle = document.querySelector('.nav-toggle');
+const siteNav = document.getElementById('site-nav');
+
+if (navToggle && siteNav) {
+  const setOpen = (open) => {
+    siteNav.classList.toggle('is-open', open);
+    navToggle.setAttribute('aria-expanded', String(open));
+    navToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
   };
-  toggle.addEventListener('click', () => setMenu(toggle.getAttribute('aria-expanded') !== 'true'));
-  nav.addEventListener('click', event => { if (event.target.closest('a')) setMenu(false); });
-  document.addEventListener('keydown', event => {
-    if (event.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') {
-      setMenu(false);
-      toggle.focus();
+
+  navToggle.addEventListener('click', () => {
+    setOpen(!siteNav.classList.contains('is-open'));
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && siteNav.classList.contains('is-open')) {
+      setOpen(false);
+      navToggle.focus();
     }
   });
-  document.addEventListener('click', event => {
-    if (!event.target.closest('.nav-wrap')) setMenu(false);
+
+  // Reset when resizing back up to the desktop layout.
+  window.matchMedia('(min-width: 901px)').addEventListener('change', (e) => {
+    if (e.matches) setOpen(false);
   });
-  const desktop = window.matchMedia('(min-width: 1101px)');
-  desktop.addEventListener('change', () => setMenu(false));
 }
 
+// ---- 2. Contact form ----
 const form = document.getElementById('contact-form');
+
 if (form) {
-  const service = form.elements.namedItem('service');
-  const requested = new URLSearchParams(window.location.search).get('service');
-  if ([...service.options].some(option => option.value === requested)) service.value = requested;
-  const submit = form.querySelector('button[type="submit"]');
+  // Links such as contact.html?topic=recovery-point preselect the topic.
+  const topic = new URLSearchParams(window.location.search).get('topic');
+  const topicSelect = form.querySelector('[name="topic"]');
+  if (topic && topicSelect) {
+    const match = topicSelect.querySelector(`option[data-topic="${CSS.escape(topic)}"]`);
+    if (match) match.selected = true;
+  }
+
   const status = document.getElementById('form-status');
-  const fallback = document.getElementById('email-fallback');
-  const originalLabel = submit.innerHTML;
-  submit.disabled = false;
-  let sending = false;
-  const showStatus = message => {
+  const button = form.querySelector('button[type="submit"]');
+
+  const showStatus = (message, isError) => {
     status.textContent = message;
+    status.classList.toggle('is-error', Boolean(isError));
     status.hidden = false;
+    status.focus();
   };
-  const makeEmail = () => {
-    const data = new FormData(form);
-    const subject = service.selectedOptions[0].textContent;
-    const body = ['Name: ' + String(data.get('name') || '').trim(),
-      'Company: ' + String(data.get('company') || '').trim(),
-      'Email: ' + String(data.get('email') || '').trim(),
-      'Phone: ' + String(data.get('phone') || '').trim(),
-      'Inquiry: ' + subject].join('\r\n');
-    return 'mailto:' + form.dataset.email + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-  };
-  form.addEventListener('submit', async event => {
-    event.preventDefault();
-    if (sending || !form.reportValidity()) return;
-    fallback.href = makeEmail();
-    fallback.hidden = true;
-    if (form.dataset.delivery !== 'formbold') {
-      // A mailto link cannot tell us whether a message was sent. Keep all fields.
-      showStatus('Your email is ready. Open the prepared email below, then send it from your email app. Nothing has been sent yet.');
-      fallback.hidden = false;
-      fallback.focus();
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    if (!form.checkValidity()) {
+      form.reportValidity();
       return;
     }
-    sending = true;
-    submit.disabled = true;
-    form.setAttribute('aria-busy', 'true');
-    submit.textContent = 'Sending…';
-    showStatus('Sending your inquiry…');
-    const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 20000);
+
+    button.disabled = true;
+    button.textContent = 'Sending…';
+
     try {
-      const response = await fetch(form.action, {
-        method: 'POST', body: JSON.stringify(Object.fromEntries(new FormData(form))),
-        headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
-        credentials: 'omit', signal: controller.signal,
+      const response = await fetch(FORM_ENDPOINT, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' }
       });
-      if (!response.ok || response.redirected) throw new Error('Submission rejected');
-      // Formbold's official client uses a successful HTTP response as acknowledgement.
-      // Also honor an explicit provider error if the response includes JSON.
-      if ((response.headers.get('content-type') || '').includes('application/json')) {
-        const result = await response.json();
-        if (result?.success === false || result?.error || result?.status === 'error') {
-          throw new Error('Submission not confirmed');
-        }
-      }
-      showStatus('Thank you. Your inquiry was received. Our team will contact you using the details you provided.');
+      if (!response.ok) throw new Error(`FormBold responded ${response.status}`);
+
       form.reset();
-    } catch {
-      showStatus('We could not confirm delivery. Your details are still here. You can try again, open the prepared email below, or call us. If delivery was interrupted, the original inquiry may still have arrived.');
-      fallback.hidden = false;
+      showStatus('Thank you. Your message has been sent and we will respond during business hours, 5:00 AM to 10:00 PM Central.');
+    } catch (err) {
+      showStatus('Your message could not be sent. Please try again, or call (512) 640-9102 or email brant@pinesoil.com.', true);
     } finally {
-      clearTimeout(timeout);
-      sending = false;
-      submit.disabled = false;
-      form.removeAttribute('aria-busy');
-      submit.innerHTML = originalLabel;
+      button.disabled = false;
+      button.textContent = 'Send Message';
     }
   });
 }
+
+// ---- 3. Footer year ----
+document.querySelectorAll('[data-year]').forEach((el) => {
+  el.textContent = new Date().getFullYear();
+});

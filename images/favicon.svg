@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Placeholder favicon. Replace with the Pines Energy Group logo (see README). -->
+  <rect width="64" height="64" fill="#0c1b33"/>
+  <rect y="56" width="64" height="8" fill="#b3162f"/>
+  <text x="32" y="45" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="42" font-weight="700" fill="#ffffff">P</text>
+</svg>

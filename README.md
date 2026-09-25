@@ -1,123 +1,204 @@
-# Pines Energy Group website
+# Pines Energy Group LLC Website
 
-A static corporate website for Pines Energy Group LLC in Athens, Texas. The company has two divisions: **Pines USA** (biodiesel and fuel) and **Pines Solutions** (oil recycling and cleaning). Pines Solutions also operates **Recovery Point**.
+Static corporate website for **Pines Energy Group LLC**, a Texas limited liability company at 3855 TX-31, Athens, TX 75752. Plain HTML, CSS, and a small JavaScript file. There is no build step, framework, or database, and it is hosted on GitHub Pages at **https://pinesoil.com/**.
 
-The site uses ordinary HTML, CSS, and a small JavaScript file. It works on GitHub Pages, including the existing `/pinesoilcompany/` project path. No framework, dependency installation, database, or server-side application is needed to host it.
+## Company Structure on the Site
 
-## Pages
+| Company | Role | Page | Color theme |
+| --- | --- | --- | --- |
+| Pines Energy Group LLC | Parent company | `index.html`, `pages/about.html` | Red, white, navy |
+| Pines USA | Fuel: biodiesel blends made from waste cooking oil | `pages/pines-usa.html` | Red, white, navy |
+| Pines Solutions | Oil recycling and cleaning: collection and the Recovery Point | `pages/pines-solutions.html` | Pine green, white, navy |
+| Recovery Point (run by Pines Solutions) | 24-hour self-service oil drop-off for registered partners | `pages/recovery-point.html` | Pine green, white, navy |
 
-| Page | Public file | Purpose |
-| --- | --- | --- |
-| Home | `index.html` | Parent company, two divisions, and service entry points |
-| About | `pages/about.html` | Company structure and a shortened existing founder story |
-| Pines USA | `pages/pines-usa.html` | Biodiesel production, fuel inquiries, and questions |
-| Pines Solutions | `pages/pines-solutions.html` | Oil collection, recycling, cleaning inquiries |
-| Recovery Point | `pages/recovery-point.html` | Location, access hours, directions, and general visit information |
-| Contact | `pages/contact.html` | Phone, email, address, hours, and inquiry form |
-| Privacy Policy | `pages/privacy-policy.html` | Information practices, providers, retention, and privacy requests |
-| Terms of Service | `pages/terms-of-service.html` | Website terms and the distinction from actual service agreements |
+## File Structure
 
-The removed fuel brokerage and holdings pages are no longer present. Existing `pines-green.html` and `restaurants.html` bookmarks redirect to Pines Solutions; `farmers.html` redirects to Pines USA. `404.html` directs other missing-page visitors to the company homepage. These static redirects are browser redirects, not HTTP 301 responses.
-
-## Preview locally
-
-With Node.js 18 or later installed:
-
-```sh
-npm start
+```
+pinesoilcompany/
+├── index.html                  Home page for Pines Energy Group (parent company)
+├── CNAME                       Custom domain for GitHub Pages (pinesoil.com)
+├── robots.txt                  Tells search engines they may crawl the site
+├── sitemap.xml                 List of pages for search engines
+├── css/
+│   └── style.css               All styles for every page
+├── js/
+│   └── main.js                 Mobile menu, contact form (FormBold), footer year
+├── pages/
+│   ├── about.html              Company story, structure, principles, leadership
+│   ├── pines-usa.html          Pines USA: biodiesel blends, production, FAQ
+│   ├── pines-solutions.html    Pines Solutions: collection, materials, partners
+│   ├── recovery-point.html     Recovery Point: how it works, rules, location, FAQ
+│   ├── contact.html            Contact details and the contact form
+│   ├── privacy.html            Privacy Policy
+│   └── terms.html              Terms of Service
+└── images/
+    ├── favicon.svg             Browser tab icon (PLACEHOLDER, replace with logo)
+    ├── favicon-32.png          Browser tab icon, PNG fallback (PLACEHOLDER)
+    ├── apple-touch-icon.png    iPhone/iPad home screen icon, 180x180 (PLACEHOLDER)
+    ├── og-cover.jpg            Preview image shown when a link is shared (1200x630)
+    ├── owner-900.jpg           Leadership photo, web size (not currently shown)
+    └── owner.jpg               Original leadership photo (not served, too large)
 ```
 
-Open **http://127.0.0.1:4173**. The preview also supports **http://127.0.0.1:4173/pinesoilcompany/** to check GitHub Pages project links. Stop the server with Ctrl+C. The server listens on this computer only.
+## Previewing Locally
 
-If `npm` is unavailable, use `node scripts/serve.mjs`. There are no packages to install for previewing, building, or the basic checks.
+From the project folder, run:
 
-## Where to make changes
+```bash
+python -m http.server 8080
+```
 
-The published HTML is generated and committed to the repository. Edit the source below, run the build, and include both the source and generated files in your commit. Direct edits to generated HTML will be overwritten by the next build.
+Then open http://localhost:8080. (Opening the HTML files directly by double-clicking also works, but the contact form needs a real web address to submit.)
 
-| File | What to edit |
+## Editing Content
+
+Each page is a complete HTML file. Open it, find the text, change it, and save.
+
+**The header and footer are repeated on every page.** If you change a navigation link, the phone number, the hours, or the footer, make the same change in all 8 HTML files. A find-and-replace across the project folder (for example, in VS Code: Ctrl+Shift+H) is the fastest way to do this.
+
+### Contact details used across the site
+
+| Detail | Value |
 | --- | --- |
-| `site.config.mjs` | Company contact information, hours, base URL, policy date, and Formbold endpoint |
-| `scripts/build.mjs` | Page content, shared header/footer, navigation, SEO, and structured data |
-| `scripts/legal.mjs` | Privacy Policy and Terms of Service text |
-| `css/site.css` | Complete responsive layout, original colors and typography, and shared components |
-| `css/fonts.css` | Locally hosted Playfair Display, Source Sans 3, and Bebas Neue fonts |
-| `js/main.js` | Mobile navigation and inquiry form behavior |
-| `images/favicon.svg` | Temporary browser-tab icon |
-| `scripts/social-cover.html` | Design source for the social sharing image |
-| `images/social-cover.png` | Current 1200 × 630 social sharing image |
+| Phone | (512) 640-9102, linked as `tel:+15126409102` |
+| Email | brant@pinesoil.com |
+| Address | 3855 TX-31, Athens, TX 75752 |
+| Office hours | 5:00 AM to 10:00 PM Central, daily |
+| Recovery Point | Open 24 hours, 7 days a week, registered partners only |
 
-After editing content or settings:
+To change one of these, find and replace it across all `.html` files. The phone and address also appear in the structured data (the `<script type="application/ld+json">` block near the top of each page), and the error message in `js/main.js` includes the phone number and email.
 
-```sh
-npm run build
-npm run check
+## Colors and Fonts
+
+All colors are set as variables at the top of `css/style.css`:
+
+- `--navy` and related shades: header, dark sections, footer
+- `--accent`: the main accent (red by default)
+- `--accent-on-dark`: a lighter version of the accent, used only for small text on navy so it stays readable
+
+Division pages switch the accent by adding a class to `<body>`:
+
+- `<body class="theme-usa">`: red (Pines USA)
+- `<body class="theme-solutions">`: pine green (Pines Solutions and Recovery Point)
+- no class: red (Pines Energy Group pages)
+
+To adjust a theme, edit its `body.theme-*` block near the top of the stylesheet.
+
+**Fonts:** headings use Playfair Display at weight 600 (the same style as before, but less heavy than the old 900 weight). Body text uses Source Sans 3. Both load from Google Fonts at the top of `css/style.css`.
+
+## Adding the Logo
+
+The header uses the text wordmark "Pines Energy Group / Athens, Texas". It does not need a logo image, and none is placeholdered there.
+
+**The favicon files are placeholders** (a white "P" on navy). When the logo is ready:
+
+1. Replace `images/favicon.svg` with an SVG version of the logo mark (square works best).
+2. Replace `images/favicon-32.png` with a 32x32 PNG.
+3. Replace `images/apple-touch-icon.png` with a 180x180 PNG on a solid background (no transparency).
+
+Keep the same file names and no HTML changes are needed. Browsers cache favicons heavily, so a hard refresh (Ctrl+F5) may be needed to see the change.
+
+If you later want the logo in the header, put an `<img>` inside the `<a class="wordmark">` element on each page.
+
+## Contact Form (FormBold)
+
+The form on `pages/contact.html` submits to FormBold:
+
+```
+https://formbold.com/s/oWrDm
 ```
 
-Building also updates `sitemap.xml`, `robots.txt`, the legacy redirects, and the 404 page. The build uses only Node's built-in modules. It does not regenerate the social image; browser QA does that from `scripts/social-cover.html`.
+This URL appears in two places, and both must match:
 
-The design follows the original website: deep navy gradients, crimson accents, blue-tinted light sections, uppercase navigation, prominent rectangular buttons, and the original Playfair Display, Source Sans 3, and Bebas Neue font families. Headings use a lighter 600 weight, natural wrapping, and a consistent size scale. Hero details stay in document flow, and layouts stack before columns become cramped. Fonts and licenses live in `images/fonts/` and are served locally without third-party font requests. Pines Solutions and Recovery Point use pine green accents. The two division panels have static accent borders; there are no floating elements, glow effects, scroll reveals, or moving tickers. The header uses the company name without a logo.
+1. The `action="..."` attribute on the `<form>` in `pages/contact.html` (used if JavaScript is off)
+2. `FORM_ENDPOINT` at the top of `js/main.js` (used normally, so visitors stay on the page and see a confirmation message)
 
-## Current operating details
+Fields sent: `name`, `company`, `email`, `phone`, `topic`, `message`. Name, email, topic, and message are required.
 
-- Company: **Pines Energy Group LLC**, registered with the Texas Secretary of State.
-- Operations and Recovery Point: **3855 TX-31, Athens, TX 75752**.
-- Phone: **(512) 640-9102**.
-- Email: **brant@pinesoil.com**.
-- Company hours: **5:00 AM–10:00 PM Central**.
-- Recovery Point access: **4:00 AM–midnight Central**.
+**Topic preselection:** links such as `contact.html?topic=recovery-point` open the form with the topic already chosen. Valid values: `pines-usa`, `collection`, `recovery-point`, `general`. They match the `data-topic` attributes on the `<option>` elements.
 
-Days of operation and holiday exceptions have not been specified. The website therefore does not assume a seven-day schedule and asks visitors to call to confirm operating days. Update `hoursNote` in the config when those details are settled. Recovery Point access and company contact hours are deliberately listed separately.
+Before launch, send one real test message and confirm it arrives in your FormBold inbox and email.
 
-## Connect Formbold
+## Analytics (Not Set Up Yet)
 
-**The original repository did not contain a Formbold submission endpoint.** The integration is implemented, but `formboldEndpoint` is currently blank. Until it is supplied, the form prepares an email and explicitly tells visitors that nothing has been sent. Visitors then click “Open prepared email” and send it using their own email app. Phone and email links remain available.
+The Privacy Policy states that the site uses **cookieless** analytics and sets no cookies. To stay consistent with that, choose a cookieless provider, for example:
 
-To activate direct submission:
+- **Cloudflare Web Analytics** (free, cookieless)
+- **GoatCounter** (free for small sites, cookieless)
+- **Plausible** (paid, cookieless)
 
-1. In the Formbold dashboard, open the intended form's integration settings.
-2. Copy its public submission endpoint, shaped like `https://formbold.com/s/YOUR_FORM_ID`.
-3. Set `formboldEndpoint` in `site.config.mjs` to that URL. Do not enter an API token, password, or private key.
-4. Run `npm run build` and publish the updated files.
-5. Confirm the intended recipient, allowed domains, spam settings, and field requirements in Formbold. This form sends `name`, `company`, `email`, `phone`, and `service`; it does not collect a free-text message or file uploads.
-6. Send an intentional test inquiry on the deployed domain and confirm its arrival in the Formbold dashboard and intended inbox. The local QA uses intercepted responses and does not verify account delivery.
+**Avoid Google Analytics (GA4) in its default setup.** It sets cookies, which would make the Privacy Policy inaccurate.
 
-With Formbold configured, the form sends a JSON POST and checks the provider’s HTTP response, following its official client’s approach. Explicit errors in a JSON response are also handled. It preserves entered details on failure, provides a prepared-email alternative, and blocks duplicate clicks while sending. With JavaScript disabled, the configured form posts directly to Formbold; the email fallback version provides direct contact links and cannot accidentally submit personal details into the page URL.
+Every page has a marked spot in the `<head>`:
 
-Implementation references: [Formbold setup](https://formbold.com/docs), [HTML examples](https://formbold.com/docs/examples), and [official client submission handling](https://github.com/FormBold/formbold-react/blob/main/src/useForm.ts).
-
-## Analytics and privacy
-
-The brief states that the website uses analytics, does not sell data, and uses no cookies. **No analytics script or provider configuration was found in the supplied repository, and no provider has yet been specified.** No new tracker has been installed. Hosting-level analytics may be separate from these files.
-
-The Privacy Policy reflects the supplied business practices, describes technical data separately from inquiry information, identifies Formbold, and provides privacy-request contact methods. It accurately states that form submissions have no automatic deletion schedule instead of promising deletion that does not happen. Ordinary retention does not override applicable privacy rights.
-
-Before publishing, confirm the actual analytics provider, its collected fields and retention settings, and that its configuration is cookieless. Keep the policy aligned with that setup. The current first-party code sets no cookies and uses no local storage or session storage; it does not load third-party fonts, maps, trackers, or embedded forms. Directions open an external map only when a visitor follows the link. Formbold is contacted only upon submission when enabled. External providers' own websites may use cookies.
-
-The policies are complete website drafts based on the supplied practices, not a determination that a particular privacy law applies to the company. Have the company’s legal reviewer check them against the actual business practices and service agreements before publication. No invented product certifications, emissions savings, geographic coverage, free collection promises, or prices have been added.
-
-Policy references reviewed: [Texas Attorney General privacy guidance](https://www.texasattorneygeneral.gov/consumer-protection/file-consumer-complaint/consumer-privacy-rights/texas-data-privacy-and-security-act) and [Formbold Privacy Policy](https://formbold.com/privacy-policy).
-
-## Add the company logo later
-
-The current `images/favicon.svg` is a temporary navy/red **P** monogram, not a finished company logo. Replace it with the approved icon when ready. Keep the filename to avoid template edits, or update the icon link in `scripts/build.mjs` and rebuild. The header does not reserve an empty logo space.
-
-Existing owner photos and the previous `og-cover.jpg` are preserved as source assets but are not displayed. Current social metadata points to `social-cover.png`; it does not present a social image as an official organization logo.
-
-## Publish
-
-This work changes the local website; it does not automatically commit, push, or deploy it. Build and check first, then commit the reviewed changes and publish using the repository's existing GitHub Pages setup. Serve the repository root, since `index.html`, `pages/`, `css/`, `js/`, and `images/` contain the finished site. A deployment-time build is unnecessary when generated files are included.
-
-The current canonical base is `https://pinesoilcompany.github.io/pinesoilcompany/`. If the production domain changes, update `siteUrl` in `site.config.mjs` (keep the trailing slash) and rebuild. This updates canonical URLs, social metadata, sitemap references, structured data, and the missing-page homepage link. A `robots.txt` inside a GitHub Pages project subdirectory is informational; crawlers normally look for robots.txt at the domain root. Submit the sitemap directly if needed.
-
-## Validation
-
-`npm run check` checks internal links and anchors, local assets, duplicate IDs, structured data JSON, legal-page links, and removal of the retired divisions.
-
-`scripts/browser-check.mjs` runs optional Playwright browser checks. Install Playwright in your development environment or set `PLAYWRIGHT_MODULE` to an existing package path, start the local server, then run:
-
-```sh
-node scripts/browser-check.mjs
+```html
+<!-- ANALYTICS: paste your cookieless analytics snippet here (see README). -->
 ```
 
-By default it uses Microsoft Edge; `BROWSER_CHANNEL` can select another installed supported channel. `PREVIEW_URL` can override the local preview URL. It checks all eight pages at 1440, 1024, 768, 390, and 320 pixels, saves desktop/mobile screenshots, checks menu and keyboard behavior, FAQs, redirects, and form states using mocked responses. It also checks no-JavaScript navigation and browser storage. All form tests are intercepted locally and never send an inquiry. Results and screenshots go to `.qa/`, which is excluded from Git.
+Paste the provider's snippet there on all 8 pages. The Privacy Policy refers to "our analytics provider" without naming one, so it does not need editing. You may add the provider's name to Section 5 if you like.
+
+## Privacy Policy and Terms of Service
+
+`pages/privacy.html` and `pages/terms.html` were written for this site:
+
+- **No cookies.** The site sets none, and there are no embedded maps, videos, or social widgets that would. The Recovery Point page links out to Google and Apple Maps instead of embedding a map for this reason. If you ever add an embed, update the Cookies section of the Privacy Policy.
+- **Data collected:** name, company (optional), email, phone (optional), and message content. The policy states that personal information and analytics data are never sold.
+- **Retention:** the policy says information is kept as long as needed for business purposes and as required by law. It does not promise deletion or name a deletion schedule.
+- **Service providers named:** FormBold (form), GitHub Pages (hosting), Google Fonts (fonts), and the analytics provider.
+- **Age:** the site is not directed to anyone under 18.
+- **Terms:** Texas law, with venue in Henderson County, Texas.
+
+Both pages show an effective date of **September 25, 2026**. Update that date whenever you change either document. These documents are a solid starting point, but having a Texas attorney review them is recommended.
+
+## Leadership Photo
+
+The About page shows Brant Borden's bio without a photo. To add one, insert this line on `pages/about.html` inside the leadership section, just above the `<span class="eyebrow">Leadership</span>` line:
+
+```html
+<img src="../images/owner-900.jpg" alt="Brant Borden, founder of Pines Energy Group LLC" width="900" height="900" loading="lazy" style="max-width:280px;margin-bottom:32px;">
+```
+
+## Site URL and SEO
+
+Canonical links, social sharing tags, structured data, `robots.txt`, and `sitemap.xml` all use this base URL:
+
+```
+https://pinesoil.com/
+```
+
+**If the domain ever changes** (for example, to `www.pinesoil.com`), find and replace that string across all `.html` files, `robots.txt`, and `sitemap.xml`, and update the `CNAME` file.
+
+Structured data describes Pines Energy Group as an `Organization` with Pines USA and Pines Solutions as sub-organizations. The Recovery Point is described as a `LocalBusiness` with 24-hour hours, which helps it appear correctly in map and local search results.
+
+When you add or remove a page, add or remove it in `sitemap.xml` too.
+
+## Deploying to GitHub Pages
+
+1. Push to the `main` branch.
+2. In the repository, go to **Settings > Pages**.
+3. Under **Source**, choose **Deploy from a branch**, then select `main` and `/ (root)`.
+4. Save. The site updates a minute or two after each push.
+
+### Custom domain (pinesoil.com)
+
+The `CNAME` file in the project root tells GitHub Pages to serve the site at `pinesoil.com`. Do not delete it. The old `pinesoilcompany.github.io/pinesoilcompany/` address redirects there automatically.
+
+For reference, the DNS records at the domain registrar should be:
+
+- A records for `pinesoil.com`: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
+- CNAME record: `www` pointing to `pinesoilcompany.github.io`
+
+Once the domain verifies in **Settings > Pages** (it can take up to 24 hours), turn on **Enforce HTTPS** there.
+
+## Removed Pages
+
+These pages were removed in this rework: `fuel-brokerage.html`, `holdings.html`, `pines-green.html`, `farmers.html`, and `restaurants.html`. Useful content from the old Pines Green, restaurant, and farmer pages was moved into the Pines Solutions and Pines USA pages. Old links to the removed pages will return a "404 not found" page.
+
+## Accessibility
+
+- A "skip to main content" link, one `<h1>` per page, and labeled navigation and breadcrumbs
+- The mobile menu reports its open/closed state to screen readers and closes with Escape
+- FAQs use native `<details>` elements, so they work with a keyboard and without JavaScript
+- Tables turn into labeled rows on phones instead of scrolling sideways
+- Visible focus outlines on all links, buttons, and form fields
+- No motion effects, and transitions are turned off for visitors who prefer reduced motion
